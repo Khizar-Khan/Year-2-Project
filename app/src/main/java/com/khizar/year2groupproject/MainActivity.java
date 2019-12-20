@@ -1,9 +1,8 @@
 package com.khizar.year2groupproject;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -20,15 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     @Override
@@ -45,11 +35,71 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_one)
+        {
+            openCS2001Activity();
+        }
+        else if(id == R.id.action_two)
+        {
+            openCS2002Activity();
+        }
+        else if(id == R.id.action_three)
+        {
+            openCS2003Activity();
+        }
+        else if(id == R.id.action_four)
+        {
+            openCS2004Activity();
+        }
+        else if(id == R.id.action_five)
+        {
+            openCS2005Activity();
+        }
+        else if(id == R.id.action_six)
+        {
+            openCS2006Activity();
+        }
+        else if(id == R.id.action_seven)
+        {
+            openCS2007Activity();
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openCS2001Activity()
+    {
+        Intent intent = new Intent(this, CS2001Activity.class);
+        startActivity(intent);
+    }
+    public void openCS2002Activity()
+    {
+        Intent intent = new Intent(this, CS2002Activity.class);
+        startActivity(intent);
+    }
+    public void openCS2003Activity()
+    {
+        Intent intent = new Intent(this, CS2003Activity.class);
+        startActivity(intent);
+    }
+    public void openCS2004Activity()
+    {
+        Intent intent = new Intent(this, CS2004Activity.class);
+        startActivity(intent);
+    }
+    public void openCS2005Activity()
+    {
+        Intent intent = new Intent(this, CS2005Activity.class);
+        startActivity(intent);
+    }
+    public void openCS2006Activity()
+    {
+        Intent intent = new Intent(this, CS2006Activity.class);
+        startActivity(intent);
+    }
+    public void openCS2007Activity()
+    {
+        Intent intent = new Intent(this, CS2007Activity.class);
+        startActivity(intent);
     }
 }
