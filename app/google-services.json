@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "715133140627",
+    "firebase_url": "https://progresstrackerchat.firebaseio.com",
+    "project_id": "progresstrackerchat",
+    "storage_bucket": "progresstrackerchat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715133140627:android:9258f989476d7e87b85766",
+        "android_client_info": {
+          "package_name": "com.khizar.year2groupproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715133140627-mkerdlbu02joudjindqnj4m53m5quc26.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.khizar.year2groupproject",
+            "certificate_hash": "c2fb87e7a46be3844ffe9b92ffb68cc085bb826e"
+          }
+        },
+        {
+          "client_id": "715133140627-r95ftiq49rd6mgsaurklpul337gd1lqr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5Y2ZZit66hroWSAUTOW84Rwa-i936XOk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715133140627-r95ftiq49rd6mgsaurklpul337gd1lqr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
