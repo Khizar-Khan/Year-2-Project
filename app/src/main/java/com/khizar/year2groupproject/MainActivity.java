@@ -37,69 +37,40 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.action_one)
         {
-            openCS2001Activity();
+            Intent intent = new Intent(this, CS2001Activity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_two)
         {
-            openCS2002Activity();
+            Intent intent = new Intent(this, CS2002Activity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_three)
         {
-            openCS2003Activity();
+            Intent intent = new Intent(this, CS2003Activity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_four)
         {
-            openCS2004Activity();
+            Intent intent = new Intent(this, CS2004Activity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_five)
         {
-            openCS2005Activity();
+            Intent intent = new Intent(this, CS2005Activity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_six)
         {
-            openCS2006Activity();
+            Intent intent = new Intent(this, CS2006Activity.class);
+            startActivity(intent);
         }
         else if(id == R.id.action_seven)
         {
-            openCS2007Activity();
+            Intent intent = new Intent(this, CS2007Activity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void openCS2001Activity()
-    {
-        Intent intent = new Intent(this, CS2001Activity.class);
-        startActivity(intent);
-    }
-    public void openCS2002Activity()
-    {
-        Intent intent = new Intent(this, CS2002Activity.class);
-        startActivity(intent);
-    }
-    public void openCS2003Activity()
-    {
-        Intent intent = new Intent(this, CS2003Activity.class);
-        startActivity(intent);
-    }
-    public void openCS2004Activity()
-    {
-        Intent intent = new Intent(this, CS2004Activity.class);
-        startActivity(intent);
-    }
-    public void openCS2005Activity()
-    {
-        Intent intent = new Intent(this, CS2005Activity.class);
-        startActivity(intent);
-    }
-    public void openCS2006Activity()
-    {
-        Intent intent = new Intent(this, CS2006Activity.class);
-        startActivity(intent);
-    }
-    public void openCS2007Activity()
-    {
-        Intent intent = new Intent(this, CS2007Activity.class);
-        startActivity(intent);
     }
 }

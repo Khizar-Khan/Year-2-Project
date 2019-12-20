@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.khizar.year2groupproject.MainActivity">
+    <item
+        android:id="@+id/action_one"
+        android:orderInCategory="2"
+        android:title="@string/action_one"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_two"
+        android:orderInCategory="3"
+        android:title="@string/action_two"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home_button"
+        android:orderInCategory="1"
+        android:title="@string/Home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_four"
+        android:orderInCategory="4"
+        android:title="@string/action_four"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_five"
+        android:orderInCategory="5"
+        android:title="@string/action_five"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_six"
+        android:orderInCategory="6"
+        android:title="@string/action_six"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_seven"
+        android:orderInCategory="7"
+        android:title="@string/action_seven"
+        app:showAsAction="never" />
+</menu>
