@@ -72,24 +72,32 @@
                                 android:background="#8030230A">
 
                                 <Button
+                                    android:id="@+id/profileBTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF" />
+                                    android:background="#00FFFFFF"
+                                    android:onClick="profileSelection" />
 
                                 <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
+                                    android:id="@+id/profileIMG"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/grade_calc" />
+                                    android:layout_centerVertical="false"
+                                    app:srcCompat="@drawable/profile" />
 
                                 <TextView
+                                    android:id="@+id/profileTXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@id/profileIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="PLACEHOLDER"
-                                    android:textSize="16sp" />
+                                    android:text="Profile"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -107,24 +115,31 @@
                                 android:background="#8030230A">
 
                                 <Button
+                                    android:id="@+id/modulesBTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF" />
+                                    android:background="#00FFFFFF"
+                                    android:onClick="moduleSelection" />
 
                                 <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
+                                    android:id="@+id/modulesIMG"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/grade_calc" />
+                                    app:srcCompat="@drawable/modules" />
 
                                 <TextView
+                                    android:id="@+id/modulesTXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@id/modulesIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="PLACEHOLDER"
-                                    android:textSize="16sp" />
+                                    android:text="Modules"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -150,24 +165,31 @@
                                 android:background="#8030230A">
 
                                 <Button
+                                    android:id="@+id/timetableBTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF" />
+                                    android:background="#00FFFFFF"
+                                    android:onClick="timetableSelection" />
 
                                 <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
+                                    android:id="@+id/timetableIMG"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/grade_calc" />
+                                    app:srcCompat="@drawable/timetable" />
 
                                 <TextView
+                                    android:id="@+id/timetableTXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@id/timetableIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="PLACEHOLDER"
-                                    android:textSize="16sp" />
+                                    android:text="Timetable"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -185,24 +207,31 @@
                                 android:background="#8030230A">
 
                                 <Button
+                                    android:id="@+id/chatBTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF" />
+                                    android:background="#00FFFFFF"
+                                    android:onClick="chatSelection" />
 
                                 <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
+                                    android:id="@+id/chatIMG"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/grade_calc" />
+                                    app:srcCompat="@drawable/chat" />
 
                                 <TextView
+                                    android:id="@+id/chatTXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@id/chatIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="PLACEHOLDER"
-                                    android:textSize="16sp" />
+                                    android:text="Chat"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -228,24 +257,31 @@
                                 android:background="#8030230A">
 
                                 <Button
+                                    android:id="@+id/resourcesBTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF" />
+                                    android:background="#00FFFFFF"
+                                    android:onClick="resourceSelection" />
 
                                 <ImageView
-                                    android:layout_width="50dp"
-                                    android:layout_height="50dp"
+                                    android:id="@+id/resourcesIMG"
+                                    android:layout_width="100dp"
+                                    android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/grade_calc" />
+                                    app:srcCompat="@drawable/resources" />
 
                                 <TextView
+                                    android:id="@+id/resourcesTXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_below="@id/resourcesIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="PLACEHOLDER"
-                                    android:textSize="16sp" />
+                                    android:text="Resources"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -270,7 +306,7 @@
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:background="#00FFFFFF"
-                                    android:onClick="gradeCalculator" />
+                                    android:onClick="gradeCalculatorSelection" />
 
                                 <ImageView
                                     android:id="@+id/gradeCalcIMG"
@@ -287,7 +323,8 @@
                                     android:layout_centerHorizontal="true"
                                     android:text="Grade Calculator"
                                     android:textColor="#FFFFFF"
-                                    android:textSize="16sp" />
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
 
@@ -307,12 +344,13 @@
                         android:layout_width="120dp"
                         android:layout_height="96dp"
                         android:layout_gravity="center"
-                        android:src="@drawable/checklist" />
+                        android:src="@drawable/home" />
 
                     <TextView
                         android:id="@+id/textView3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView6"
                         android:layout_gravity="center"
                         android:text="HOME PAGE"
                         android:textColor="#FFFFFF"

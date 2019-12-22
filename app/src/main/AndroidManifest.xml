@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GradeCalcActivity"></activity>
+        <activity android:name=".ResourceActivity"></activity>
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".TimetableActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ModuleSelectionActivity" />
+        <activity android:name=".GradeCalcActivity" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +54,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
