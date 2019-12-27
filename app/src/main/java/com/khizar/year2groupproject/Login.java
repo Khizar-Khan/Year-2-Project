@@ -26,8 +26,6 @@ public class Login extends AppCompatActivity
     ProgressBar progressBar;
     FirebaseAuth fAuth;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,6 +38,13 @@ public class Login extends AppCompatActivity
         fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.loginButton);
         mCreateBtn = findViewById(R.id.createAccountText);
+
+        if(fAuth.getCurrentUser() != null)
+        {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
