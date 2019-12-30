@@ -22,6 +22,8 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.ProviderQueryResult;
+import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -97,15 +99,16 @@ public class Register extends AppCompatActivity
                     mEmail.setError("Email is required!");
                     return;
                 }
+
                 if(TextUtils.isEmpty(password))
                 {
                     mPassword.setError("Password is required!");
                     return;
                 }
 
-                if(password.length() < 6)
+                if(password.length() < 5)
                 {
-                    mPassword.setError("Password must be 6 or more characters!");
+                    mPassword.setError("Password must be 5 or more characters!");
                     return;
                 }
                 progressBar.setVisibility(View.VISIBLE);
@@ -135,10 +138,11 @@ public class Register extends AppCompatActivity
                             });
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
+                            finish();
                         }
                         else
                         {
-                            Toast.makeText(Register.this, "ERROR" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "ERROR: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -152,6 +156,7 @@ public class Register extends AppCompatActivity
             {
                 Intent intent = new Intent(getApplicationContext(), Login.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

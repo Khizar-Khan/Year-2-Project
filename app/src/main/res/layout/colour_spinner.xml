@@ -7,5 +7,5 @@
     android:padding="8dp"
     android:textSize="18sp"
     android:background="@drawable/abc_spinner_mtrl_am_alpha"
-    android:backgroundTint="@android:color/white">
+    android:backgroundTint="#2D7E8F">
 </CheckedTextView>
