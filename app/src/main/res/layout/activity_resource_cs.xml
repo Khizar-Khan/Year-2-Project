@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@drawable/gradient_background"
+    tools:context=".ResourceActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/scrollView3">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="190dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView_Resources_M1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="CS2001"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="225dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM1a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 1"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="225dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM1b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 2"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="260dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM1c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 3"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="260dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM1d"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 4"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="290dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView_Resources_M2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="CS2002"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="325dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM2a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 1"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="325dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM2b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 2"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="360dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM2c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 3"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="360dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM2d"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 4"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="390dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView_Resources_M3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="CS2003"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="425dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM3a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 1"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="425dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM3b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 2"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="460dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM3c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 3"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="460dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM3d"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 4"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="490dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView_Resources_M4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="CS2004"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="525dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM4a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 1"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="525dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM4b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 2"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="560dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM4c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 3"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="560dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM4d"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 4"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="590dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/textView_Resources_M5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:text="CS2005"
+                        android:textColor="#FFFFFF"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="625dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM5a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 1"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="625dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM5b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 2"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="660dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM5c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 3"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="215dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginTop="660dp"
+                    android:orientation="vertical">
+                    <Button
+                        android:id="@+id/resourceButtonM5d"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:background="#303030"
+                        android:text="Resource 4"
+                        android:textColor="#FFFFFF" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView_Resources"
+                        android:layout_width="205dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/resources" />
+
+                    <TextView
+                        android:id="@+id/textView_Resources"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/imageView_Resources"
+                        android:layout_gravity="center"
+                        android:text="RESOURCES"
+                        android:textColor="#FFFFFF"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
