@@ -140,10 +140,14 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2001-The-4th-Paradigm", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -161,10 +165,14 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2001-UML-2-in-Action", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -182,10 +190,14 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2002-Sommerville-Software-Engineering", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -203,10 +215,14 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2002-Software-Engineering-Theory-and-Practice", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
+
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -224,10 +240,13 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2003-Interaction-Design - Beyond-Human-Computer-Interaction", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -245,10 +264,13 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2003-The-Design-of-Everyday-Things", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -266,10 +288,13 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2004-Data-Structures-and-Algorithms-in-Java", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -287,10 +312,13 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2004-How-to-Solve-it-Modern-Heuristics", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -308,10 +336,13 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2005-Computer-Networking-A-Top-Down-Approach", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -329,10 +360,13 @@ public class ResourceActivity extends AppCompatActivity {
             public void onSuccess(Uri uri) {
                 String url = uri.toString();
                 fileDownloader(ResourceActivity.this, "CS2005-Operating-System-Concepts", ".pdf", DIRECTORY_DOWNLOADS, url);
+                Toast.makeText(ResourceActivity.this, "File Successfully Downloading", Toast.LENGTH_SHORT).show();
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
+                Toast.makeText(ResourceActivity.this, "An error occurred during the File Download", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ResourceActivity.this, "Please try again", Toast.LENGTH_SHORT).show();
 
             }
         });
