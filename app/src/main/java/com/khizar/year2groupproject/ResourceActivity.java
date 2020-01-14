@@ -197,6 +197,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -218,6 +219,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -239,6 +241,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -260,6 +263,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -281,6 +285,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -302,6 +307,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -323,6 +329,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -344,6 +351,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -365,6 +373,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
@@ -386,6 +395,7 @@ public class ResourceActivity extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         String message = dataSnapshot.getValue(String.class);
                         web_view.loadUrl(message);
+                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
