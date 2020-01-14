@@ -8,4 +8,14 @@
     <string name="action_five">CS2005</string>
     <string name="action_six">CS2006</string>
     <string name="action_seven">CS2007</string>
+
+    <string-array name="courses">
+        <item>
+            Computer Science
+        </item>
+        <item>
+            Business Computing
+        </item>
+    </string-array>
+
 </resources>

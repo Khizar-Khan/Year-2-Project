@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_background"
-    tools:context=".ModuleSelectionActivity">
+    tools:context=".ModuleSelectionBusinessComputingActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -161,22 +161,22 @@
                                 android:background="#8030230A">
 
                                 <TextView
-                                    android:id="@+id/cs2004TXT"
+                                    android:id="@+id/cs2006TXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="5dp"
-                                    android:text="CS2004"
+                                    android:text="CS2006"
                                     android:textColor="#FFFFFF"
                                     android:textSize="24sp"
                                     android:textStyle="bold"
                                     app:fontFamily="sans-serif-black" />
 
                                 <Button
-                                    android:id="@+id/cs2004BTN"
+                                    android:id="@+id/cs2006BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2004Activity" />
+                                    android:onClick="cs2006Activity" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
@@ -187,6 +187,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
                         android:gravity="center"
                         android:orientation="horizontal">
 
@@ -200,26 +201,25 @@
                                 android:background="#8030230A">
 
                                 <TextView
-                                    android:id="@+id/cs2005TXT"
+                                    android:id="@+id/cs2007TXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="5dp"
-                                    android:text="CS2005"
+                                    android:text="CS2007"
                                     android:textColor="#FFFFFF"
                                     android:textSize="24sp"
                                     android:textStyle="bold"
                                     app:fontFamily="sans-serif-black" />
 
                                 <Button
-                                    android:id="@+id/cs2005BTN"
+                                    android:id="@+id/cs2007BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2005Activity" />
+                                    android:onClick="cs2007Activity" />
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
-
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>

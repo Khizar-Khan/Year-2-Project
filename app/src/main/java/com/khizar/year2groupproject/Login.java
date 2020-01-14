@@ -22,11 +22,11 @@ public class Login extends AppCompatActivity
 {
     EditText mEmail, mPassword;
     Button mLoginBtn;
-    TextView mCreateBtn;
+    Button mCreateBtn;
+    TextView mForgotPasswordBtn;
+
     ProgressBar progressBar;
     FirebaseAuth fAuth;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,9 +39,18 @@ public class Login extends AppCompatActivity
         progressBar = findViewById(R.id.progressBar2);
         fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.loginButton);
-        mCreateBtn = findViewById(R.id.createAccountText);
+        mCreateBtn = findViewById(R.id.signUpBTN);
+        mForgotPasswordBtn = findViewById(R.id.forgotPasswordTXT);
 
-        mLoginBtn.setOnClickListener(new View.OnClickListener() {
+        if(fAuth.getCurrentUser() != null)
+        {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
+        mLoginBtn.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {
@@ -59,10 +68,6 @@ public class Login extends AppCompatActivity
                     return;
                 }
 
-                if(password.length() < 6)
-                {
-                    mPassword.setError("Password must be 6 or more characters!");
-                }
                 progressBar.setVisibility(View.VISIBLE);
 
                 //Authenticate user//
@@ -76,10 +81,11 @@ public class Login extends AppCompatActivity
                             Toast.makeText(Login.this, "Logged In", Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                             startActivity(intent);
+                            finish();
                         }
                         else
                         {
-                            Toast.makeText(Login.this, "ERROR" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Login.this, "ERROR: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             progressBar.setVisibility(View.GONE);
                         }
                     }
@@ -93,6 +99,18 @@ public class Login extends AppCompatActivity
             {
                 Intent intent = new Intent(getApplicationContext(), Register.class);
                 startActivity(intent);
+                finish();
+            }
+        });
+
+        mForgotPasswordBtn.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                Intent intent = new Intent(getApplicationContext(), ResetPasswordActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
