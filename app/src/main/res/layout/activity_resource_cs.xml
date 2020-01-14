@@ -388,7 +388,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="Website - virtualbox.org"
+                    android:text="Website - khanacademy.org"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -407,7 +407,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="Website - ubuntu.com"
+                    android:text="javaworld.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -480,7 +480,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="Website - khanacademy.org"
+                    android:text="Website - virtualbox.org"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -499,7 +499,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="Website - javaworld.com"
+                    android:text="Website - ubuntu.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
