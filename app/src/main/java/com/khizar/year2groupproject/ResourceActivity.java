@@ -10,11 +10,18 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
 import android.view.View;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -24,32 +31,54 @@ public class ResourceActivity extends AppCompatActivity {
 
     Button resourceButtonM1a;
     Button resourceButtonM1b;
+    Button resourceButtonM1c;
+    Button resourceButtonM1d;
 
     Button resourceButtonM2a;
     Button resourceButtonM2b;
+    Button resourceButtonM2c;
+    Button resourceButtonM2d;
 
     Button resourceButtonM3a;
     Button resourceButtonM3b;
+    Button resourceButtonM3c;
+    Button resourceButtonM3d;
 
     Button resourceButtonM4a;
     Button resourceButtonM4b;
+    Button resourceButtonM4c;
+    Button resourceButtonM4d;
 
     Button resourceButtonM5a;
     Button resourceButtonM5b;
+    Button resourceButtonM5c;
+    Button resourceButtonM5d;
 
     Button resourceButtonM6a;
     Button resourceButtonM6b;
+    Button resourceButtonM6c;
+    Button resourceButtonM6d;
 
     Button resourceButtonM7a;
     Button resourceButtonM7b;
+    Button resourceButtonM7c;
+    Button resourceButtonM7d;
+
 
     Button mainmenuButton;
+    Button gobackButton;
 
 
     FirebaseStorage firebaseStorage;
     StorageReference storageReference;
-
     StorageReference ref;
+
+    private WebView web_view;
+    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+    private DatabaseReference reference = firebaseDatabase.getReference();
+    private DatabaseReference childReference;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,26 +87,43 @@ public class ResourceActivity extends AppCompatActivity {
 
         resourceButtonM1a = findViewById(R.id.resourceButtonM1a);
         resourceButtonM1b = findViewById(R.id.resourceButtonM1b);
+        resourceButtonM1c = findViewById(R.id.resourceButtonM1c);
+        resourceButtonM1d = findViewById(R.id.resourceButtonM1d);
 
         resourceButtonM2a = findViewById(R.id.resourceButtonM2a);
         resourceButtonM2b = findViewById(R.id.resourceButtonM2b);
+        resourceButtonM2c = findViewById(R.id.resourceButtonM2c);
+        resourceButtonM2d = findViewById(R.id.resourceButtonM2d);
 
         resourceButtonM3a = findViewById(R.id.resourceButtonM3a);
         resourceButtonM3b = findViewById(R.id.resourceButtonM3b);
+        resourceButtonM3c = findViewById(R.id.resourceButtonM3c);
+        resourceButtonM3d = findViewById(R.id.resourceButtonM3d);
 
         resourceButtonM4a = findViewById(R.id.resourceButtonM4a);
         resourceButtonM4b = findViewById(R.id.resourceButtonM4b);
+        resourceButtonM4c = findViewById(R.id.resourceButtonM4c);
+        resourceButtonM4d = findViewById(R.id.resourceButtonM4d);
 
         resourceButtonM5a = findViewById(R.id.resourceButtonM5a);
         resourceButtonM5b = findViewById(R.id.resourceButtonM5b);
+        resourceButtonM5c = findViewById(R.id.resourceButtonM5c);
+        resourceButtonM5d = findViewById(R.id.resourceButtonM5d);
 
         resourceButtonM6a = findViewById(R.id.resourceButtonM6a);
         resourceButtonM6b = findViewById(R.id.resourceButtonM6b);
+        resourceButtonM6c = findViewById(R.id.resourceButtonM6c);
+        resourceButtonM6d = findViewById(R.id.resourceButtonM6d);
+
 
         resourceButtonM7a = findViewById(R.id.resourceButtonM7a);
         resourceButtonM7b = findViewById(R.id.resourceButtonM7b);
+        resourceButtonM7c = findViewById(R.id.resourceButtonM7c);
+        resourceButtonM7d = findViewById(R.id.resourceButtonM7d);
 
         mainmenuButton = findViewById(R.id.mainmenuButton);
+        gobackButton = findViewById(R.id.gobackButton);
+
 
 
         resourceButtonM1a.setOnClickListener(new View.OnClickListener() {
@@ -129,6 +175,233 @@ public class ResourceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 downloadM5b();
+            }
+        });
+
+
+        web_view = findViewById(R.id.webView);
+        web_view.getSettings().setJavaScriptEnabled(true);
+        web_view.setWebViewClient(new WebViewClient());
+        web_view.setVisibility(View.GONE);
+        gobackButton.setVisibility(View.GONE);
+
+
+        resourceButtonM1c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM1c");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM1d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM1d");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM2c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM2c");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM2d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM2d");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM3c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM3c");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM3d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM3d");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM4c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM4c");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM4d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM4d");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM5c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM5c");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });resourceButtonM5d.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
+                childReference = reference.child("resourceM5d");
+                childReference.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        String message = dataSnapshot.getValue(String.class);
+                        web_view.loadUrl(message);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+
+
+        });gobackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                web_view.setVisibility(View.GONE);
+                gobackButton.setVisibility(View.GONE);
+
             }
         });mainmenuButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -316,7 +589,7 @@ public class ResourceActivity extends AppCompatActivity {
     public void downloadM4b() {
 
         storageReference = firebaseStorage.getInstance().getReference();
-        ref = storageReference.child("Resources/CS2004-How-to-Solve-it-Modern-Heuristics.pdf");
+        ref = storageReference.child("Resources/CS2004-How-to-Solve-it-Modern-Heuristics");
 
         ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override

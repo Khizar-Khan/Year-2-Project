@@ -111,7 +111,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="TBA"
+                    android:text="Website - eu.udacity.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -130,7 +130,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="TBA"
+                    android:text="Website - hubspot.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -203,7 +203,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="TBA"
+                    android:text="Website - guru99.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -222,7 +222,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="TBA"
+                    android:text="Website - geeksforgeeks.org"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -296,7 +296,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="TBA"
+                    android:text="Website - tutorialspoint.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -315,7 +315,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
-                    android:text="TBA"
+                    android:text="Website - asktog.com"
                     android:textColor="#FFFFFF"
                     android:textSize="11sp" />
             </LinearLayout>
@@ -507,6 +507,20 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <WebView
+                    android:id="@+id/webView"
+                    android:layout_width="match_parent"
+                    android:layout_height="570dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:layout_marginTop="580dp"
                 android:layout_marginBottom="10dp"
@@ -520,6 +534,26 @@
                     android:layout_marginEnd="10dp"
                     android:background="#303030"
                     android:text="Main Menu"
+                    android:textColor="#FFFFFF"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="620dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/gobackButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="#303030"
+                    android:text="Go Back"
                     android:textColor="#FFFFFF"
                     android:visibility="visible" />
             </LinearLayout>
