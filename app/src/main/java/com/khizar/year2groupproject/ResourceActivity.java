@@ -3,6 +3,7 @@ package com.khizar.year2groupproject;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.app.DownloadManager;
@@ -42,6 +43,8 @@ public class ResourceActivity extends AppCompatActivity {
     Button resourceButtonM7a;
     Button resourceButtonM7b;
 
+    Button mainmenuButton;
+
 
     FirebaseStorage firebaseStorage;
     StorageReference storageReference;
@@ -73,6 +76,8 @@ public class ResourceActivity extends AppCompatActivity {
 
         resourceButtonM7a = findViewById(R.id.resourceButtonM7a);
         resourceButtonM7b = findViewById(R.id.resourceButtonM7b);
+
+        mainmenuButton = findViewById(R.id.mainmenuButton);
 
 
         resourceButtonM1a.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +129,12 @@ public class ResourceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 downloadM5b();
+            }
+        });mainmenuButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ResourceActivity.this, MainActivity.class));
+
             }
         });
 
