@@ -36,36 +36,31 @@ public class CS2005Activity extends AppCompatActivity {
         {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
+            finish();
         }
         else if(id == R.id.action_one)
         {
             Intent intent = new Intent(this, CS2001Activity.class);
             startActivity(intent);
+            finish();
         }
         else if(id == R.id.action_two)
         {
             Intent intent = new Intent(this, CS2002Activity.class);
             startActivity(intent);
+            finish();
         }
         else if(id == R.id.action_three)
         {
             Intent intent = new Intent(this, CS2003Activity.class);
             startActivity(intent);
+            finish();
         }
         else if(id == R.id.action_four)
         {
             Intent intent = new Intent(this, CS2004Activity.class);
             startActivity(intent);
-        }
-        else if(id == R.id.action_six)
-        {
-            Intent intent = new Intent(this, CS2006Activity.class);
-            startActivity(intent);
-        }
-        else if(id == R.id.action_seven)
-        {
-            Intent intent = new Intent(this, CS2007Activity.class);
-            startActivity(intent);
+            finish();
         }
 
         return super.onOptionsItemSelected(item);

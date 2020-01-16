@@ -4,17 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_background"
+    android:background="@color/colorPrimaryDark"
     tools:context=".ModuleSelectionActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/scrollView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -36,31 +41,60 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/cardColor">
 
-                            <RelativeLayout
+                            <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#8030230A">
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:id="@+id/cs2001TXT"
-                                    android:layout_width="wrap_content"
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="150dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:text="CS2001"
-                                    android:textColor="#FFFFFF"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold"
-                                    app:fontFamily="sans-serif-black" />
+                                    android:src="@drawable/group_project"
+                                    app:layout_constraintBottom_toBottomOf="@+id/cs2001BTN"
+                                    app:layout_constraintEnd_toEndOf="@+id/cs2001BTN"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <Button
                                     android:id="@+id/cs2001BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2001Activity" />
-                            </RelativeLayout>
+                                    android:onClick="cs2001Activity"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2001TitleTXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Level 2 Group Project"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2001TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="CS2001"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
@@ -75,31 +109,60 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/cardColor">
 
-                            <RelativeLayout
+                            <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#8030230A">
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:id="@+id/cs2002TXT"
-                                    android:layout_width="wrap_content"
+                                <ImageView
+                                    android:id="@+id/imageView11"
+                                    android:layout_width="140dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:text="CS2002"
-                                    android:textColor="#FFFFFF"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold"
-                                    app:fontFamily="sans-serif-black" />
+                                    android:src="@drawable/software_dev"
+                                    app:layout_constraintBottom_toBottomOf="@+id/cs2002BTN"
+                                    app:layout_constraintEnd_toEndOf="@+id/cs2002BTN"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <Button
                                     android:id="@+id/cs2002BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2002Activity" />
-                            </RelativeLayout>
+                                    android:onClick="cs2002Activity"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2002TitleTXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Software Development and Management"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2002TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="CS2002"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
@@ -114,31 +177,60 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/cardColor">
 
-                            <RelativeLayout
+                            <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#8030230A">
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:id="@+id/cs2003TXT"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:text="CS2003"
-                                    android:textColor="#FFFFFF"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold"
-                                    app:fontFamily="sans-serif-black" />
+                                <ImageView
+                                    android:id="@+id/imageView12"
+                                    android:layout_width="140dp"
+                                    android:layout_height="70dp"
+                                    android:src="@drawable/ui"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="@+id/cs2003BTN"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <Button
                                     android:id="@+id/cs2003BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2003Activity" />
-                            </RelativeLayout>
+                                    android:onClick="cs2003Activity"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2003TitleTXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Usability Engineering"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2003TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="CS2003"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
@@ -153,31 +245,60 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/cardColor">
 
-                            <RelativeLayout
+                            <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#8030230A">
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:id="@+id/cs2004TXT"
-                                    android:layout_width="wrap_content"
+                                <ImageView
+                                    android:id="@+id/imageView13"
+                                    android:layout_width="140dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:text="CS2004"
-                                    android:textColor="#FFFFFF"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold"
-                                    app:fontFamily="sans-serif-black" />
+                                    android:src="@drawable/data"
+                                    app:layout_constraintBottom_toBottomOf="@+id/cs2004BTN"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <Button
                                     android:id="@+id/cs2004BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2004Activity" />
-                            </RelativeLayout>
+                                    android:onClick="cs2004Activity"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2004TitleTXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Algorithms and Their Applications"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2004TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="CS2004"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
@@ -192,31 +313,60 @@
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            app:cardBackgroundColor="@color/cardColor">
 
-                            <RelativeLayout
+                            <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="#8030230A">
+                                android:layout_height="match_parent">
 
-                                <TextView
-                                    android:id="@+id/cs2005TXT"
-                                    android:layout_width="wrap_content"
+                                <ImageView
+                                    android:id="@+id/imageView10"
+                                    android:layout_width="140dp"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginLeft="5dp"
-                                    android:text="CS2005"
-                                    android:textColor="#FFFFFF"
-                                    android:textSize="24sp"
-                                    android:textStyle="bold"
-                                    app:fontFamily="sans-serif-black" />
+                                    android:src="@drawable/networks"
+                                    app:layout_constraintBottom_toBottomOf="@+id/cs2005BTN"
+                                    app:layout_constraintEnd_toEndOf="@+id/cs2005BTN"
+                                    app:layout_constraintTop_toTopOf="parent" />
 
                                 <Button
                                     android:id="@+id/cs2005BTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:background="#00FFFFFF"
-                                    android:onClick="cs2005Activity" />
-                            </RelativeLayout>
+                                    android:onClick="cs2005Activity"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2005TitleTXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="Networks and Operating Systems"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/cs2005TXT"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="5dp"
+                                    android:text="CS2005"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="24sp"
+                                    android:textStyle="bold"
+                                    app:fontFamily="sans-serif-black"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
                         </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
@@ -224,4 +374,13 @@
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="125dp"
+        android:src="@drawable/modules"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
