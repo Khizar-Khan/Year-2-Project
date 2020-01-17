@@ -72,6 +72,7 @@
                             android:layout_width="0dp"
                             android:layout_height="0dp"
                             android:background="#00ffffff"
+                            android:onClick="toDoListSelection"
                             android:textAlignment="viewStart"
                             android:textSize="18sp"
                             app:layout_constraintBottom_toBottomOf="parent"

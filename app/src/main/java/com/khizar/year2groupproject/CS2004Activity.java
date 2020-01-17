@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 public class CS2004Activity extends AppCompatActivity {
 
@@ -64,5 +65,10 @@ public class CS2004Activity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+    public void toDoListSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2004ToDoListActivity.class);
+        startActivity(intent);
     }
 }

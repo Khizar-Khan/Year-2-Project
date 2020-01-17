@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -68,5 +69,11 @@ public class CS2001Activity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void toDoListSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2001ToDoListActivity.class);
+        startActivity(intent);
     }
 }
