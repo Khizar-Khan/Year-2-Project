@@ -28,14 +28,4 @@
         android:orderInCategory="1"
         android:title="@string/Home"
         app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/action_six"
-        android:orderInCategory="6"
-        android:title="@string/action_six"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/action_seven"
-        android:orderInCategory="7"
-        android:title="@string/action_seven"
-        app:showAsAction="never" />
 </menu>
