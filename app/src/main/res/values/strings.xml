@@ -18,4 +18,64 @@
         </item>
     </string-array>
 
+    <string-array name="Week">
+        <item> Monday </item>
+        <item> Tuesday </item>
+        <item> Wednesday </item>
+        <item> Thursday </item>
+        <item> Friday </item>
+    </string-array>
+
+    <string-array name="Monday">
+        <item>CS2004 Lecture - HWLL Theatre 001</item>
+        <item>CS2002 Lecture - LECT E</item>
+        <item>CS2002 Lab - WLFB 013</item>
+        <item>CS2004 Lab - QDNT 223</item>
+
+    </string-array>
+
+    <string-array name="Tuesday">
+        <item>CS2001 Lecture - HWLL Theatre 001</item>
+        <item>CS2005 Lecture - ESGW 006</item>
+    </string-array>
+
+    <string-array name="Wednesday">
+
+    </string-array>
+
+    <string-array name="Thursday">
+        <item>CS2001 Lab - WLFB 013</item>
+    </string-array>
+
+    <string-array name="Friday">
+        <item>CS2005 Lab WLFB 013</item>
+        <item>CS2003 Seminar WLFB 207/208</item>
+    </string-array>
+
+    <string-array name="time1">
+        <item>9:00 - 10:00</item>
+        <item>10:00 - 11:00</item>
+        <item>11:00 - 12:00</item>
+        <item>13:00 - 15:00</item>
+    </string-array>
+
+    <string-array name="time2">
+        <item>14:00 - 15:00</item>
+        <item>16:00 - 18:00</item>
+    </string-array>
+
+    <string-array name="time3">
+
+    </string-array>
+
+    <string-array name="time4">
+        <item>11:00 - 12:00</item>
+    </string-array>
+
+    <string-array name="time5">
+        <item>10:00 - 11:00</item>
+        <item>11:00 - 12:00</item>
+    </string-array>
+
+
 </resources>

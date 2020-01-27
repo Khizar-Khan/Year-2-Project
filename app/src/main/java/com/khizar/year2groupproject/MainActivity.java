@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,6 +22,7 @@ import javax.annotation.Nullable;
 
 public class MainActivity extends AppCompatActivity
 {
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -70,11 +74,11 @@ public class MainActivity extends AppCompatActivity
             }
         });
     }
-
     public void timetableSelection(View view)
     {
         Intent intent = new Intent(getApplicationContext(), TimetableActivity.class);
         startActivity(intent);
+
     }
 
     public void chatSelection(View view)
