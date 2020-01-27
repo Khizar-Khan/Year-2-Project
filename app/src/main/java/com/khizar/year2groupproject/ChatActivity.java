@@ -19,6 +19,8 @@ public class ChatActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("https://webapps.brunel.ac.uk/apps/jobs-search/UI/pages/results.aspx?sysSection=2&sort=datecreated&rpp=10&type=1+Year+Placement&rel=Dept+of+Computer+Science&filter=2");
 
+        WebSettings webSettings = webView.getSettings();
+        webSettings.setJavaScriptEnabled(true);
     }
 
     @Override
