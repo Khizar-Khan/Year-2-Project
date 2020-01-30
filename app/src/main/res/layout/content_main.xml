@@ -208,28 +208,28 @@
                                 android:background="#8030230A">
 
                                 <Button
-                                    android:id="@+id/toDoBTN"
+                                    android:id="@+id/chatBTN"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
                                     android:background="#00FFFFFF"
-                                    android:onClick="toDoListSelection" />
+                                    android:onClick="chatSelection" />
 
                                 <ImageView
-                                    android:id="@+id/toDoIMG"
+                                    android:id="@+id/chatIMG"
                                     android:layout_width="100dp"
                                     android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/checklist" />
+                                    app:srcCompat="@drawable/chat" />
 
                                 <TextView
-                                    android:id="@+id/toDoTXT"
+                                    android:id="@+id/chatTXT"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/toDoIMG"
+                                    android:layout_below="@id/chatIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="To-Do List"
+                                    android:text="Chat"
                                     android:textColor="#FFFFFF"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />

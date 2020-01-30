@@ -77,9 +77,9 @@ public class MainActivity extends AppCompatActivity
         startActivity(intent);
     }
 
-    public void toDoListSelection(View view)
+    public void chatSelection(View view)
     {
-        Intent intent = new Intent(getApplicationContext(), ToDoListActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
         startActivity(intent);
     }
 
