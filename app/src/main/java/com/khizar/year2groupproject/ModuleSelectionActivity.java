@@ -46,4 +46,10 @@ public class ModuleSelectionActivity extends AppCompatActivity
         Intent intent = new Intent(getApplicationContext(), CS2005Activity.class);
         startActivity(intent);
     }
+
+    public void toDoListSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), ToDoListActivity.class);
+        startActivity(intent);
+    }
 }

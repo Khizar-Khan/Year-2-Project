@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CS2005ToDoListActivity"></activity>
+        <activity android:name=".ChatActivity"></activity>
+        <activity android:name=".ToDoListActivity" />
+        <activity android:name=".CS2005ToDoListActivity" />
         <activity android:name=".CS2004ToDoListActivity" />
         <activity android:name=".CS2003ToDoListActivity" />
         <activity android:name=".CS2002ToDoListActivity" />
@@ -17,7 +19,6 @@
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".ModuleSelectionBusinessComputingActivity" />
         <activity android:name=".ResourceActivity" />
-        <activity android:name=".ChatActivity" />
         <activity android:name=".TimetableActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ModuleSelectionActivity" />
