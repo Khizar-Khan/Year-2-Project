@@ -76,4 +76,10 @@ public class CS2001Activity extends AppCompatActivity
         Intent intent = new Intent(getApplicationContext(), CS2001ToDoListActivity.class);
         startActivity(intent);
     }
+
+    public void moduleInfoSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2001ModuleInfoActivity.class);
+        startActivity(intent);
+    }
 }

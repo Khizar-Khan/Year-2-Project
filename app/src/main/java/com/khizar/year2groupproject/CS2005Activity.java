@@ -71,4 +71,10 @@ public class CS2005Activity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), CS2005ToDoListActivity.class);
         startActivity(intent);
     }
+
+    public void moduleInfoSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2005ModuleInfoActivity.class);
+        startActivity(intent);
+    }
 }

@@ -72,4 +72,10 @@ public class CS2003Activity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), CS2003ToDoListActivity.class);
         startActivity(intent);
     }
+
+    public void moduleInfoSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2003ModuleInfoActivity.class);
+        startActivity(intent);
+    }
 }
