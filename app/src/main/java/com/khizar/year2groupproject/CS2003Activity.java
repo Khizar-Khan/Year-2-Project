@@ -31,6 +31,10 @@ public class CS2003Activity extends AppCompatActivity {
         mType.setText(assessmentInformation.get(9));
         mDeadline.setText(assessmentInformation.get(10));
         mWeight.setText(assessmentInformation.get(11) + "%");
+
+        TextView mCurrentTXT = findViewById(R.id.currentTXT);
+        ArrayList<String> userGrade = sqlConnector.readUserGrade("CS2003");
+        mCurrentTXT.setText(userGrade.get(0)+"%");
     }
 
     @Override
@@ -90,6 +94,12 @@ public class CS2003Activity extends AppCompatActivity {
     public void moduleInfoSelection(View view)
     {
         Intent intent = new Intent(getApplicationContext(), CS2003ModuleInfoActivity.class);
+        startActivity(intent);
+    }
+
+    public void enterGradesSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2003GradesActivity.class);
         startActivity(intent);
     }
 }

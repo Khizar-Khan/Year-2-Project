@@ -36,6 +36,22 @@ public class CS2004Activity extends AppCompatActivity {
         mType2.setText(assessmentInformation.get(15));
         mDeadline2.setText(assessmentInformation.get(16));
         mWeight2.setText(assessmentInformation.get(17) + "%");
+
+        TextView mCurrentTXT = findViewById(R.id.currentTXT);
+        TextView mCurrent2TXT = findViewById(R.id.current2TXT);
+        ArrayList<String> userGrade = sqlConnector.readUserGrade("CS2004");
+        mCurrentTXT.setText(userGrade.get(0)+"%");
+        mCurrent2TXT.setText(userGrade.get(1)+"%");
+
+        TextView mOverallTXT = findViewById(R.id.overallTXT);
+
+        double gradeOne = Integer.valueOf(userGrade.get(0));
+        double weightOne = Integer.valueOf(assessmentInformation.get(14));
+        double gradeTwo = Integer.valueOf(userGrade.get(1));
+        double weightTwo = Integer.valueOf(assessmentInformation.get(17));
+
+        double overall = ((gradeOne*weightOne) + (gradeTwo*weightTwo))/100;
+        mOverallTXT.setText(overall+"%");
     }
 
     @Override
@@ -94,6 +110,12 @@ public class CS2004Activity extends AppCompatActivity {
     public void moduleInfoSelection(View view)
     {
         Intent intent = new Intent(getApplicationContext(), CS2004ModuleInfoActivity.class);
+        startActivity(intent);
+    }
+
+    public void enterGradesSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2004GradesActivity.class);
         startActivity(intent);
     }
 }

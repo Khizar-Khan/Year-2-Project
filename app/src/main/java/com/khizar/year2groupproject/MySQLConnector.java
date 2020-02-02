@@ -2,6 +2,8 @@ package com.khizar.year2groupproject;
 
 import android.os.StrictMode;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -10,7 +12,36 @@ import java.util.ArrayList;
 
 public class MySQLConnector
 {
-    public static ArrayList<String> readModuleInformation()
+    FirebaseAuth fAuth =  FirebaseAuth.getInstance();
+    String userID = fAuth.getCurrentUser().getUid();
+
+    public MySQLConnector()
+    {
+        enableStrictMode();
+
+        try
+        {
+            Statement stmt;
+
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/users";
+            Connection con = DriverManager.getConnection( url,"Khizar","Khizar");
+
+            //Get a Statement object
+            stmt = con.createStatement();
+
+            //Insert user id
+            stmt.executeUpdate("INSERT INTO User_Grades(User_ID) SELECT "+"'"+userID+"' FROM DUAL "+"WHERE NOT EXISTS(SELECT User_ID FROM User_Grades WHERE User_ID="+"'"+userID+"')");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
+    public ArrayList<String> readModuleInformation()
     {
         enableStrictMode();
 
@@ -44,7 +75,7 @@ public class MySQLConnector
         return modulesInformation;
     }
 
-    public static ArrayList<String> readAssessmentInformation()
+    public ArrayList<String> readAssessmentInformation()
     {
         enableStrictMode();
 
@@ -73,6 +104,73 @@ public class MySQLConnector
             System.out.println(e);
         }
         return assessmentsInformation;
+    }
+
+    public void writeUserGrade(String module_GradeNum, int grade)
+    {
+        enableStrictMode();
+
+        try
+        {
+            Statement stmt;
+
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/users";
+            Connection con = DriverManager.getConnection( url,"Khizar","Khizar");
+
+            //Get a Statement object
+            stmt = con.createStatement();
+
+            // Insert a row
+            stmt.executeUpdate("UPDATE User_Grades SET "+module_GradeNum+"="+grade+" WHERE User_ID="+"'"+userID+"'");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
+    public ArrayList<String> readUserGrade(String moduleCode)
+    {
+        enableStrictMode();
+
+        ArrayList<String> userGrades = new ArrayList<>();
+
+        try
+        {
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/users";
+            Connection con = DriverManager.getConnection( url,"Khizar","Khizar");
+            Statement select = con.createStatement();
+
+            ResultSet rs;
+            if(moduleCode=="CS2001" || moduleCode=="CS2003")
+            {
+                rs = select.executeQuery("SELECT "+moduleCode+"_GradeOne FROM User_Grades WHERE User_ID="+"'"+userID+"'");
+                while (rs.next())
+                {
+                    userGrades.add(Integer.toString(rs.getInt(1)));
+                }
+            }
+            else
+            {
+                rs = select.executeQuery("SELECT "+moduleCode+"_GradeOne, "+moduleCode+"_GradeTwo FROM User_Grades WHERE User_ID="+"'"+userID+"'");
+                while (rs.next())
+                {
+                    userGrades.add(Integer.toString(rs.getInt(1)));
+                    userGrades.add(Integer.toString(rs.getInt(2)));
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return userGrades;
     }
 
     public static void enableStrictMode()
