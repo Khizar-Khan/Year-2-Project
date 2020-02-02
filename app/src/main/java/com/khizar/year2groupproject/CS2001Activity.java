@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class CS2001Activity extends AppCompatActivity
 {
@@ -19,6 +22,17 @@ public class CS2001Activity extends AppCompatActivity
         setContentView(R.layout.activity_cs2001);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        TextView mDeadline = findViewById(R.id.deadlineTXT);
+        TextView mType = findViewById(R.id.typeTXT);
+        TextView mWeight = findViewById(R.id.weightTXT);
+
+        MySQLConnector sqlConnector = new MySQLConnector();
+        ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
+
+        mType.setText(assessmentInformation.get(0));
+        mDeadline.setText(assessmentInformation.get(1));
+        mWeight.setText(assessmentInformation.get(2) + "%");
     }
 
     @Override

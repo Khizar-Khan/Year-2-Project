@@ -44,6 +44,36 @@ public class MySQLConnector
         return modulesInformation;
     }
 
+    public static ArrayList<String> readAssessmentInformation()
+    {
+        enableStrictMode();
+
+        ArrayList<String> assessmentsInformation = new ArrayList<>();
+
+        try
+        {
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/modules";
+            Connection con = DriverManager.getConnection( url,"Khizar","Khizar");
+            Statement select = con.createStatement();
+
+            ResultSet rs = select.executeQuery("SELECT Assessment_Type, Assessment_Deadline, Assessment_Weight FROM Assessments_Information");
+
+            while (rs.next())
+            {
+                assessmentsInformation.add(rs.getString(1));
+                assessmentsInformation.add(rs.getString(2));
+                assessmentsInformation.add(Integer.toString(rs.getInt(3)));
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return assessmentsInformation;
+    }
 
     public static void enableStrictMode()
     {
