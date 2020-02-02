@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class CS2001Activity extends AppCompatActivity
 {
@@ -19,6 +22,21 @@ public class CS2001Activity extends AppCompatActivity
         setContentView(R.layout.activity_cs2001);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        TextView mDeadline = findViewById(R.id.deadlineTXT);
+        TextView mType = findViewById(R.id.typeTXT);
+        TextView mWeight = findViewById(R.id.weightTXT);
+
+        MySQLConnector sqlConnector = new MySQLConnector();
+        ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
+
+        mType.setText(assessmentInformation.get(0));
+        mDeadline.setText(assessmentInformation.get(1));
+        mWeight.setText(assessmentInformation.get(2) + "%");
+
+        TextView mCurrentTXT = findViewById(R.id.currentTXT);
+        ArrayList<String> userGrade = sqlConnector.readUserGrade("CS2001");
+        mCurrentTXT.setText(userGrade.get(0)+"%");
     }
 
     @Override
@@ -74,6 +92,18 @@ public class CS2001Activity extends AppCompatActivity
     public void toDoListSelection(View view)
     {
         Intent intent = new Intent(getApplicationContext(), CS2001ToDoListActivity.class);
+        startActivity(intent);
+    }
+
+    public void moduleInfoSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2001ModuleInfoActivity.class);
+        startActivity(intent);
+    }
+
+    public void enterGradesSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2001GradesActivity.class);
         startActivity(intent);
     }
 }
