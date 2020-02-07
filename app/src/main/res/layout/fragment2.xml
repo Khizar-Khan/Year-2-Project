@@ -203,7 +203,7 @@
                         android:layout_width="135dp"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:hint="Grade (%)"
+                        android:hint="Weight (%)"
                         android:inputType="numberDecimal"
                         android:textAlignment="center"
                         app:layout_constraintBottom_toBottomOf="parent"

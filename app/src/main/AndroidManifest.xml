@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.khizar.year2groupproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,6 +12,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".DayDetail"></activity>
+        <activity android:name=".CS2005GradesActivity"></activity>
+        <activity android:name=".CS2004GradesActivity" />
+        <activity android:name=".CS2003GradesActivity" />
+        <activity android:name=".CS2002GradesActivity" />
+        <activity android:name=".CS2001GradesActivity" />
+        <activity android:name=".CS2005ModuleInfoActivity" />
+        <activity android:name=".CS2004ModuleInfoActivity" />
+        <activity android:name=".CS2003ModuleInfoActivity" />
+        <activity android:name=".CS2002ModuleInfoActivity" />
+        <activity android:name=".CS2001ModuleInfoActivity" />
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".ToDoListActivity" />
         <activity android:name=".CS2005ToDoListActivity" />
         <activity android:name=".CS2004ToDoListActivity" />
         <activity android:name=".CS2003ToDoListActivity" />
@@ -18,16 +32,24 @@
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".ModuleSelectionBusinessComputingActivity" />
         <activity android:name=".ResourceActivity" />
-        <activity android:name=".ChatActivity" />
         <activity android:name=".TimetableActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ModuleSelectionActivity" />
         <activity android:name=".GradeCalcActivity" />
-        <activity android:name=".Login">
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".Register" />

@@ -95,6 +95,6 @@ public class LetterImageView extends AppCompatImageView {
         String[] colorsArr = getResources().getStringArray(R.array.colors);
         return Color.parseColor(colorsArr[random.nextInt(colorsArr.length)]);
     }
-	
+
 
 }
