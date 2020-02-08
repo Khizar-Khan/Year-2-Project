@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CS2004GradesActivity extends AppCompatActivity
 {
@@ -32,6 +33,7 @@ public class CS2004GradesActivity extends AppCompatActivity
 
         MySQLConnector sqlConnector = new MySQLConnector();
         sqlConnector.writeUserGrade("CS2004_GradeOne", grade);
+        Toast.makeText(CS2004GradesActivity.this, "Submitted!", Toast.LENGTH_SHORT).show();
     }
 
     public void enterGradeTwo(View view)
@@ -51,5 +53,6 @@ public class CS2004GradesActivity extends AppCompatActivity
 
         MySQLConnector sqlConnector = new MySQLConnector();
         sqlConnector.writeUserGrade("CS2004_GradeTwo", grade);
+        Toast.makeText(CS2004GradesActivity.this, "Submitted!", Toast.LENGTH_SHORT).show();
     }
 }

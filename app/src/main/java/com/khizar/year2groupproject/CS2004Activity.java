@@ -74,6 +74,11 @@ public class CS2004Activity extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+        else if(id == R.id.refresh)
+        {
+            finish();
+            startActivity(getIntent());
+        }
         else if(id == R.id.action_one)
         {
             Intent intent = new Intent(this, CS2001Activity.class);

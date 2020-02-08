@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Progress Tracker</string>
     <string name="Home">Home</string>
+    <string name="Refresh">Refresh</string>
     <string name="action_one">CS2001</string>
     <string name="action_two">CS2002</string>
     <string name="action_three">CS2003</string>
