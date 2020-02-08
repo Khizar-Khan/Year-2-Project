@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.khizar.year2groupproject.Utils.LetterImageView;
+import java.util.ArrayList;
 
 import androidx.appcompat.widget.Toolbar;
 
@@ -34,6 +35,18 @@ public class DayDetail extends AppCompatActivity {
     public static String[] Time5;
     private String[] PreferredDay;
     private String[] PreferredTime;
+    ArrayList<String> Mondays = new ArrayList<String>();
+    ArrayList<String> Tuesdays = new ArrayList<String>();
+    ArrayList<String> Wednesdays = new ArrayList<String>();
+    ArrayList<String> Thursdays = new ArrayList<String>();
+    ArrayList<String> Fridays = new ArrayList<String>();
+
+    ArrayList<String> Times1 = new ArrayList<String>();
+    ArrayList<String> Times2 = new ArrayList<String>();
+    ArrayList<String> Times3 = new ArrayList<String>();
+    ArrayList<String> Times4 = new ArrayList<String>();
+    ArrayList<String> Times5 = new ArrayList<String>();
+
 
 
 
@@ -61,17 +74,29 @@ public class DayDetail extends AppCompatActivity {
 
     private void setupListView(){
 
-        Monday = getResources().getStringArray(R.array.Monday);
-        Tuesday = getResources().getStringArray(R.array.Tuesday);
-        Wednesday = getResources().getStringArray(R.array.Wednesday);
-        Thursday = getResources().getStringArray(R.array.Thursday);
-        Friday = getResources().getStringArray(R.array.Friday);
+        Mondays = MySQLConnector.readTimetableDayData("Monday");
+        Tuesdays = MySQLConnector.readTimetableDayData("Tuesday");
+        Wednesdays = MySQLConnector.readTimetableDayData("Wednesday");
+        Thursdays = MySQLConnector.readTimetableDayData("Thursday");
+        Fridays = MySQLConnector.readTimetableDayData("Friday");
 
-        Time1 = getResources().getStringArray(R.array.time1);
-        Time2 = getResources().getStringArray(R.array.time2);
-        Time3 = getResources().getStringArray(R.array.time3);
-        Time4 = getResources().getStringArray(R.array.time4);
-        Time5 = getResources().getStringArray(R.array.time5);
+        Monday = Mondays.toArray(new String[Mondays.size()]);
+        Tuesday = Tuesdays.toArray(new String[Tuesdays.size()]);
+        Wednesday = Wednesdays.toArray(new String[Wednesdays.size()]);
+        Thursday = Thursdays.toArray(new String[Thursdays.size()]);
+        Friday = Fridays.toArray(new String[Fridays.size()]);
+
+        Times1 = MySQLConnector.readTimetableTimeData("Monday");
+        Times2 = MySQLConnector.readTimetableTimeData("Tuesday");
+        Times3 = MySQLConnector.readTimetableTimeData("Wednesday");
+        Times4 = MySQLConnector.readTimetableTimeData("Thursday");
+        Times5 = MySQLConnector.readTimetableTimeData("Friday");
+
+        Time1 = Times1.toArray(new String[Times1.size()]);
+        Time2 = Times2.toArray(new String[Times2.size()]);
+        Time3 = Times3.toArray(new String[Times3.size()]);
+        Time4 = Times4.toArray(new String[Times4.size()]);
+        Time5 = Times5.toArray(new String[Times5.size()]);
 
         String selected_day = TimetableActivity.sharedPreferences.getString(TimetableActivity.SEL_DAY, null);
 
