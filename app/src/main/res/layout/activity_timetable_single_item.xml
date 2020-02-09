@@ -1,9 +1,8 @@
-<androidx.cardview.widget.CardView
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/colorAccent"
-    android:elevation="4dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:background="@android:color/secondary_text_light"
+    android:elevation="4dp">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -11,18 +10,18 @@
 
 
         <com.khizar.year2groupproject.Utils.LetterImageView
+            android:id="@+id/ivLetter"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:id="@+id/ivLetter"
-            android:layout_margin="8dp"/>
+            android:layout_margin="8dp" />
 
         <TextView
             android:id="@+id/tvWeek"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
             android:layout_toRightOf="@+id/ivLetter"
             android:text="Days"
-            android:layout_marginLeft="6dp"
             android:textSize="24sp"
             android:textStyle="bold" />
 
