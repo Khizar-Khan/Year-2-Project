@@ -8,7 +8,7 @@
     tools:context=".TimetableActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/ToolbarWeek"
+        android:id="@+id/ToolbarDayDetail"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="@android:color/secondary_text_dark">
@@ -16,10 +16,10 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ListView
-        android:id="@+id/lvWeek"
+        android:id="@+id/lvDayDetail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/ToolbarWeek"
+        android:layout_below="@+id/ToolbarDayDetail"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
