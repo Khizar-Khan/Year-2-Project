@@ -106,4 +106,10 @@ public class CS2001Activity extends AppCompatActivity
         Intent intent = new Intent(getApplicationContext(), CS2001GradesActivity.class);
         startActivity(intent);
     }
+
+    public void enterTimeline(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2001_Timeline.class);
+        startActivity(intent);
+    }
 }

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".CS2005_Timeline">
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="415dp"
+        android:layout_height="55dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054" />
+
+    <TextView
+        android:id="@+id/textView35"
+        android:layout_width="415dp"
+        android:layout_height="55dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <TextView
+        android:id="@+id/txtTimerDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtTimerHour"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082" />
+
+    <TextView
+        android:id="@+id/txtTimerDay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Day"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtTimerHour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <TextView
+        android:id="@+id/txtTimerHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/txtTimerHour2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <TextView
+        android:id="@+id/txtTimerMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toEndOf="@+id/txtTimerHour"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/txtTimerMinute2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toEndOf="@+id/txtTimerHour"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <TextView
+        android:id="@+id/txtTimerSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toEndOf="@+id/txtTimerMinute"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/txtTimerSecond2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toEndOf="@+id/txtTimerMinute"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.251" />
+
+    <TextView
+        android:id="@+id/Assessment_name"
+        android:layout_width="410dp"
+        android:layout_height="38dp"
+        android:background="#6AFFFFFF"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimerDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Assessment_name2"
+        android:layout_width="410dp"
+        android:layout_height="38dp"
+        android:background="#6AFFFFFF"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimerMinute2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time left:"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimerDay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Assessment_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time left:"
+        app:layout_constraintBottom_toTopOf="@+id/txtTimerDay2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Assessment_name"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tvEvent"
+        android:layout_width="410dp"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.054"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvEvent2"
+        android:layout_width="410dp"
+        android:layout_height="56dp"
+        android:background="#FFFFFF"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.237"
+        tools:visibility="gone" />
+
+    <TextView
+        android:id="@+id/enoughtime"
+        android:layout_width="411dp"
+        android:layout_height="93dp"
+        android:alpha="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/enoughtime2"
+        android:layout_width="411dp"
+        android:layout_height="93dp"
+        android:alpha="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

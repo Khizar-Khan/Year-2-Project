@@ -118,4 +118,9 @@ public class CS2005Activity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), CS2005GradesActivity.class);
         startActivity(intent);
     }
+    public void enterTimeline(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), CS2005_Timeline.class);
+        startActivity(intent);
+    }
 }

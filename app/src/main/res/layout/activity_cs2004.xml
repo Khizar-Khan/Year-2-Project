@@ -41,7 +41,20 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="@+id/cardView17"
                         app:layout_constraintStart_toStartOf="@+id/cardView16"
-                        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                        app:layout_constraintTop_toBottomOf="@+id/textView7" >
+
+                        <Button
+                            android:id="@+id/button3"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_marginRight="0dp"
+                            android:background="#00FFFFFF"
+                            android:onClick="enterTimeline"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:visibility="visible" />
+                    </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/cardView16"
@@ -190,6 +203,7 @@
                                 android:textSize="14sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/type2TXT" />
+
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.cardview.widget.CardView>
