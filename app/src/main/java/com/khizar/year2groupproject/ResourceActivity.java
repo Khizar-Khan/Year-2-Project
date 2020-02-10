@@ -141,6 +141,17 @@ public class ResourceActivity extends AppCompatActivity {
         textView_m4.setText(ResourcesData.get(6));
         textView_m5.setText(ResourcesData.get(8));
 
+        resourceButtonM1c.setText(ResourcesData.get(1));
+        resourceButtonM1d.setText(ResourcesData.get(3));
+        resourceButtonM2c.setText(ResourcesData.get(5));
+        resourceButtonM2d.setText(ResourcesData.get(7));
+        resourceButtonM3c.setText(ResourcesData.get(9));
+        resourceButtonM3d.setText(ResourcesData.get(11));
+        resourceButtonM4c.setText(ResourcesData.get(13));
+        resourceButtonM4d.setText(ResourcesData.get(15));
+        resourceButtonM5c.setText(ResourcesData.get(17));
+        resourceButtonM5d.setText(ResourcesData.get(19));
+
 
         resourceButtonM1a.setOnClickListener(new View.OnClickListener() {
             @Override
