@@ -13,6 +13,7 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -24,6 +25,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
@@ -115,7 +118,6 @@ public class ResourceActivity extends AppCompatActivity {
         resourceButtonM6c = findViewById(R.id.resourceButtonM6c);
         resourceButtonM6d = findViewById(R.id.resourceButtonM6d);
 
-
         resourceButtonM7a = findViewById(R.id.resourceButtonM7a);
         resourceButtonM7b = findViewById(R.id.resourceButtonM7b);
         resourceButtonM7c = findViewById(R.id.resourceButtonM7c);
@@ -124,6 +126,20 @@ public class ResourceActivity extends AppCompatActivity {
         mainmenuButton = findViewById(R.id.mainmenuButton);
         gobackButton = findViewById(R.id.gobackButton);
 
+        TextView textView_m1 = findViewById(R.id.textView_Resources_M1);
+        TextView textView_m2 = findViewById(R.id.textView_Resources_M2);
+        TextView textView_m3 = findViewById(R.id.textView_Resources_M3);
+        TextView textView_m4 = findViewById(R.id.textView_Resources_M4);
+        TextView textView_m5 = findViewById(R.id.textView_Resources_M5);
+
+        MySQLConnector sqlConnector = new MySQLConnector();
+        ArrayList<String> ResourcesData = sqlConnector.readResourcesData();
+
+        textView_m1.setText(ResourcesData.get(0));
+        textView_m2.setText(ResourcesData.get(2));
+        textView_m3.setText(ResourcesData.get(4));
+        textView_m4.setText(ResourcesData.get(6));
+        textView_m5.setText(ResourcesData.get(8));
 
 
         resourceButtonM1a.setOnClickListener(new View.OnClickListener() {
