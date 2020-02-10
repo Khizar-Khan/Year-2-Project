@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.khizar.year2groupproject">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CS2005ToDoListActivity"></activity>
+        <activity android:name=".IndustryPlacementsActivity"></activity>
+        <activity android:name=".CS2005ToDoListActivity" />
         <activity android:name=".CS2004ToDoListActivity" />
         <activity android:name=".CS2003ToDoListActivity" />
         <activity android:name=".CS2002ToDoListActivity" />
@@ -24,7 +25,8 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".ModuleSelectionActivity" />
         <activity android:name=".GradeCalcActivity" />
-        <activity android:name=".SplashScreenActivity"
+        <activity
+            android:name=".SplashScreenActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
