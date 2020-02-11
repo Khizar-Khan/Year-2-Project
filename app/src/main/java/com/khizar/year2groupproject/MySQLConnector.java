@@ -302,6 +302,38 @@ public class MySQLConnector
         return TimeInformation;
     }
 
+    public ArrayList<String> readResourcesData()
+    {
+        enableStrictMode();
+
+        ArrayList<String> ResourcesData = new ArrayList<>();
+
+        try
+        {
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/ResourcesData";
+            Connection con = DriverManager.getConnection( url,"Vignesh","Vignesh");
+            Statement select = con.createStatement();
+
+            // Execute a quesry
+            ResultSet rs = select.executeQuery("SELECT Module_Code, Resource_Name, Resource_URL FROM WebsiteResources");
+
+            while (rs.next())
+            {
+                ResourcesData.add(rs.getString(1));
+                ResourcesData.add(rs.getString(2));
+                ResourcesData.add(rs.getString(3));
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        return ResourcesData;
+    }
+
     public static void enableStrictMode()
     {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
