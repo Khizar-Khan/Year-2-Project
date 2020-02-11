@@ -318,12 +318,13 @@ public class MySQLConnector
             Statement select = con.createStatement();
 
             // Execute a quesry
-            ResultSet rs = select.executeQuery("SELECT Module_Code, Resource_Name FROM WebsiteResources");
+            ResultSet rs = select.executeQuery("SELECT Module_Code, Resource_Name, Resource_URL FROM WebsiteResources");
 
             while (rs.next())
             {
                 ResourcesData.add(rs.getString(1));
                 ResourcesData.add(rs.getString(2));
+                ResourcesData.add(rs.getString(3));
             }
         }
         catch(Exception e)
