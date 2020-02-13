@@ -7,28 +7,53 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".ToDoListActivity">
 
+    <LinearLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorSecondary"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/taskET"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"></EditText>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cardColor"
+            android:onClick="addItemBTN"
+            android:text="Add"
+            android:textColor="#ffffff"></Button>
+    </LinearLayout>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomSection"
+        android:layout_marginBottom="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/cs2001TXT"
+            <Switch
+                android:id="@+id/CS2001SWITCH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="serif-monospace"
                 android:text="CS2001:"
-                android:textAlignment="viewStart"
-                android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cs2001"
@@ -58,18 +83,18 @@
 
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/cs2002TXT"
+            <Switch
+                android:id="@+id/CS2002SWITCH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="serif-monospace"
                 android:text="CS2002:"
-                android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cs2002"
@@ -98,18 +123,18 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/cs2003TXT"
+            <Switch
+                android:id="@+id/CS2003SWITCH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="serif-monospace"
                 android:text="CS2003:"
-                android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cs2003"
@@ -138,18 +163,18 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/cs2004TXT"
+            <Switch
+                android:id="@+id/CS2004SWITCH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="serif-monospace"
                 android:text="CS2004:"
-                android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cs2004"
@@ -178,18 +203,18 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <TextView
-                android:id="@+id/cs2005TXT"
+            <Switch
+                android:id="@+id/CS2005SWITCH"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
                 android:fontFamily="serif-monospace"
                 android:text="CS2005:"
-                android:textAlignment="viewStart"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp"
-                android:textStyle="bold"></TextView>
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cs2005"
