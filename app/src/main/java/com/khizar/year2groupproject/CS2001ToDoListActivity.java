@@ -1,7 +1,10 @@
 package com.khizar.year2groupproject;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -52,8 +55,28 @@ public class CS2001ToDoListActivity extends AppCompatActivity implements Adapter
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
     {
-        toDoList.remove(i);
-        arrayAdapter.notifyDataSetChanged();
-        FileHelper.writeData(toDoList, this);
+        final int index = i;
+
+        AlertDialog.Builder aBuilder = new AlertDialog.Builder(this);
+        aBuilder.setMessage("Are you sure?").setCancelable(false).setPositiveButton("Yes", new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i)
+            {
+                toDoList.remove(index);
+                arrayAdapter.notifyDataSetChanged();
+                FileHelper.writeData(toDoList, CS2001ToDoListActivity.this);
+            }
+        }).setNegativeButton("No", new DialogInterface.OnClickListener()
+        {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i)
+            {
+                dialogInterface.cancel();
+            }
+        });
+        AlertDialog alert = aBuilder.create();
+        alert.setTitle("Delete Task");
+        alert.show();
     }
 }
