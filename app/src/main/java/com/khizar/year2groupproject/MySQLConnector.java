@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class MySQLConnector
 {
+
+
     FirebaseAuth fAuth =  FirebaseAuth.getInstance();
     String userID = fAuth.getCurrentUser().getUid();
 
@@ -173,7 +175,7 @@ public class MySQLConnector
         return userGrades;
     }
 
-    public static ArrayList<String> readTimetableDayData(String Day)
+    public static ArrayList<String> readTimetableDayData(String Day, int GroupNumber)
     {
         enableStrictMode();
 
@@ -189,9 +191,12 @@ public class MySQLConnector
             Statement select = con.createStatement();
 
             ResultSet resultset;
+
+
+
             if(Day=="Monday")
             {
-                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Monday%'");
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Monday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     DayDataInformation.add(resultset.getString(1));
@@ -199,7 +204,7 @@ public class MySQLConnector
             }
             else if(Day == "Tuesday")
             {
-                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Tuesday%'");
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Tuesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     DayDataInformation.add(resultset.getString(1));
@@ -207,7 +212,7 @@ public class MySQLConnector
             }
             else if(Day == "Wednesday")
             {
-                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Wednesday%'");
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Wednesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     DayDataInformation.add(resultset.getString(1));
@@ -215,7 +220,7 @@ public class MySQLConnector
             }
             else if(Day == "Thursday")
             {
-                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Thursday%'");
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Thursday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     DayDataInformation.add(resultset.getString(1));
@@ -223,7 +228,7 @@ public class MySQLConnector
             }
             else if(Day == "Friday")
             {
-                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Friday%'");
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Friday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     DayDataInformation.add(resultset.getString(1));
@@ -237,7 +242,7 @@ public class MySQLConnector
         return DayDataInformation;
     }
 
-    public static ArrayList<String> readTimetableTimeData(String Day)
+    public static ArrayList<String> readTimetableTimeData(String Day, int GroupNumber)
     {
         enableStrictMode();
 
@@ -255,7 +260,7 @@ public class MySQLConnector
             ResultSet resultset;
             if(Day=="Monday")
             {
-                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Monday%'");
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Monday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
@@ -264,7 +269,7 @@ public class MySQLConnector
             }
             else if(Day == "Tuesday")
             {
-                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Tuesday%'");
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Tuesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
@@ -272,7 +277,7 @@ public class MySQLConnector
             }
             else if(Day == "Wednesday")
             {
-                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Wednesday%'");
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Wednesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
@@ -280,7 +285,7 @@ public class MySQLConnector
             }
             else if(Day == "Thursday")
             {
-                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Thursday%'");
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Thursday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
@@ -288,7 +293,7 @@ public class MySQLConnector
             }
             else if(Day == "Friday")
             {
-                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Friday%'");
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Friday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
                 while (resultset.next())
                 {
                     TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));

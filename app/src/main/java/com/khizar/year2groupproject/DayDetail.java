@@ -21,6 +21,8 @@ import androidx.appcompat.widget.Toolbar;
 
 public class DayDetail extends AppCompatActivity {
 
+    int groupNumber = activity_group_input.GroupNumber;
+
     private ListView listView;
     private Toolbar toolbar;
     public static String[] Monday;
@@ -74,11 +76,11 @@ public class DayDetail extends AppCompatActivity {
 
     private void setupListView(){
 
-        Mondays = MySQLConnector.readTimetableDayData("Monday");
-        Tuesdays = MySQLConnector.readTimetableDayData("Tuesday");
-        Wednesdays = MySQLConnector.readTimetableDayData("Wednesday");
-        Thursdays = MySQLConnector.readTimetableDayData("Thursday");
-        Fridays = MySQLConnector.readTimetableDayData("Friday");
+        Mondays = MySQLConnector.readTimetableDayData("Monday", groupNumber);
+        Tuesdays = MySQLConnector.readTimetableDayData("Tuesday", groupNumber);
+        Wednesdays = MySQLConnector.readTimetableDayData("Wednesday", groupNumber);
+        Thursdays = MySQLConnector.readTimetableDayData("Thursday", groupNumber);
+        Fridays = MySQLConnector.readTimetableDayData("Friday", groupNumber);
 
         Monday = Mondays.toArray(new String[Mondays.size()]);
         Tuesday = Tuesdays.toArray(new String[Tuesdays.size()]);
@@ -86,11 +88,11 @@ public class DayDetail extends AppCompatActivity {
         Thursday = Thursdays.toArray(new String[Thursdays.size()]);
         Friday = Fridays.toArray(new String[Fridays.size()]);
 
-        Times1 = MySQLConnector.readTimetableTimeData("Monday");
-        Times2 = MySQLConnector.readTimetableTimeData("Tuesday");
-        Times3 = MySQLConnector.readTimetableTimeData("Wednesday");
-        Times4 = MySQLConnector.readTimetableTimeData("Thursday");
-        Times5 = MySQLConnector.readTimetableTimeData("Friday");
+        Times1 = MySQLConnector.readTimetableTimeData("Monday", groupNumber);
+        Times2 = MySQLConnector.readTimetableTimeData("Tuesday", groupNumber);
+        Times3 = MySQLConnector.readTimetableTimeData("Wednesday", groupNumber);
+        Times4 = MySQLConnector.readTimetableTimeData("Thursday", groupNumber);
+        Times5 = MySQLConnector.readTimetableTimeData("Friday", groupNumber);
 
         Time1 = Times1.toArray(new String[Times1.size()]);
         Time2 = Times2.toArray(new String[Times2.size()]);
