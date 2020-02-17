@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity
     }
     public void timetableSelection(View view)
     {
-        Intent intent = new Intent(getApplicationContext(), TimetableActivity.class);
+        Intent intent = new Intent(getApplicationContext(), activity_group_input.class);
         startActivity(intent);
 
     }
