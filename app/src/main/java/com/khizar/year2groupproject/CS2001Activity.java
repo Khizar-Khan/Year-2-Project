@@ -5,12 +5,16 @@ import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class CS2001Activity extends AppCompatActivity
 {
@@ -37,6 +41,27 @@ public class CS2001Activity extends AppCompatActivity
         TextView mCurrentTXT = findViewById(R.id.currentTXT);
         ArrayList<String> userGrade = sqlConnector.readUserGrade("CS2001");
         mCurrentTXT.setText(userGrade.get(0)+"%");
+
+        TextView mLabel = findViewById(R.id.mLabel);
+        TextView dLabel = findViewById(R.id.dLabel);
+        TextView eLabel = findViewById(R.id.eLabel);
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MMMM/d/E", Locale.UK);
+        String strDate = simpleDateFormat.format(calendar.getTime());
+
+        String[] values = strDate.split("/",0);
+
+        /*
+        for(int i = 0; i < values.length; i++)
+        {
+            Log.v("CHECK_DATE", values[i]);
+        }
+         */
+
+        mLabel.setText(values[1]);
+        dLabel.setText(values[2]);
+        eLabel.setText(values[3]);
     }
 
     @Override
