@@ -10,7 +10,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Locale;
 
 public class CS2004Activity extends AppCompatActivity {
 
@@ -52,6 +55,20 @@ public class CS2004Activity extends AppCompatActivity {
 
         double overall = ((gradeOne*weightOne) + (gradeTwo*weightTwo))/100;
         mOverallTXT.setText(overall+"%");
+
+        TextView mLabel = findViewById(R.id.mLabel);
+        TextView dLabel = findViewById(R.id.dLabel);
+        TextView eLabel = findViewById(R.id.eLabel);
+
+        Calendar calendar = Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy/MMMM/d/E", Locale.UK);
+        String strDate = simpleDateFormat.format(calendar.getTime());
+
+        String[] values = strDate.split("/",0);
+
+        mLabel.setText(values[1]);
+        dLabel.setText(values[2]);
+        eLabel.setText(values[3]);
     }
 
     @Override
