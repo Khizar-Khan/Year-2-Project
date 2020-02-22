@@ -9,7 +9,39 @@ import android.widget.Button;
 
 public class IndustryPlacementsActivity extends AppCompatActivity {
 
-    private Button button;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_industry_placements);
+
+    defineButtons();
+
+    }
+
+    public void defineButtons() {
+        findViewById(R.id.button).setOnClickListener(buttonClickListener);
+        findViewById(R.id.button2).setOnClickListener(buttonClickListener);
+    }
+
+    private View.OnClickListener buttonClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            switch (view.getId()) {
+
+                case R.id.button:
+                    Intent viewPlacements = new Intent(IndustryPlacementsActivity.this, ChatActivity.class);
+                    startActivity(viewPlacements);
+                    break;
+                case R.id.button2:
+                    Intent bookAppointments = new Intent(IndustryPlacementsActivity.this, BookAppointment.class);
+                    startActivity(bookAppointments);
+            }
+        }
+    };
+}
+
+
+    /*private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +57,18 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
         });
     }
 
-    public void openChatActivity()
-    {
+    public void openChatActivity() {
         Intent intent = new Intent(this, ChatActivity.class);
         startActivity(intent);
     }
-}
+
+    private Button button2;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_industry_placements);
+
+        button2 = (Button) findViewById(R.id.button2);
+        button.setOnClickListener
+        */
