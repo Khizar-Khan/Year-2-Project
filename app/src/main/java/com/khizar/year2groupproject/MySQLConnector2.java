@@ -92,7 +92,7 @@ public class MySQLConnector2 {
             Connection con = DriverManager.getConnection( url,"Paarth","Paarth");
             Statement select = con.createStatement();
 
-            ResultSet rs = select.executeQuery("SELECT Assignment1,Assignment2,Assignment3,Assignment4,Assignment5,Assignment6,Assignment7,Assignment8 FROM PersonalHours");
+            ResultSet rs = select.executeQuery("SELECT Assignment1,Assignment2,Assignment3,Assignment4,Assignment5,Assignment6,Assignment7,Assignment8 FROM PersonalHours WHERE Student="+"'"+userID+"'");
 
             while (rs.next())
             {
