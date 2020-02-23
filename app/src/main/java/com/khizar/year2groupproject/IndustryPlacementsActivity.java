@@ -21,6 +21,7 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
     public void defineButtons() {
         findViewById(R.id.button).setOnClickListener(buttonClickListener);
         findViewById(R.id.button2).setOnClickListener(buttonClickListener);
+        findViewById(R.id.button3).setOnClickListener(buttonClickListener);
     }
 
     private View.OnClickListener buttonClickListener = new View.OnClickListener() {
@@ -35,6 +36,10 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
                 case R.id.button2:
                     Intent bookAppointments = new Intent(IndustryPlacementsActivity.this, BookAppointment.class);
                     startActivity(bookAppointments);
+                    break;
+                case R.id.button3:
+                    Intent editPlacements = new Intent(IndustryPlacementsActivity.this, EditPlacementProgressActivity.class);
+                    startActivity(editPlacements);
             }
         }
     };
