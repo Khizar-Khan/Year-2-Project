@@ -19,6 +19,7 @@ public class CS2001_Timeline extends AppCompatActivity {
 
     private TextView txtTimerDay, txtTimerHour, txtTimerMinute, txtTimerSecond, assessment, enoughtime, counter;
     private TextView tvEvent;
+    private TextView Addhours, PlusCount, MinusCount;
     private Handler handler;
     private Runnable runnable;
 
@@ -26,7 +27,7 @@ public class CS2001_Timeline extends AppCompatActivity {
     ArrayList<String> assignmentHours = sqlConnector2.AssignmentHours();
     ArrayList<String> readHours = sqlConnector2.ReadHours();
     public int currentCount = Integer.valueOf(readHours.get(0));
-    public int sghours = Integer.valueOf(assignmentHours.get(1));
+    public int sghours = Integer.valueOf(assignmentHours.get(0));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +46,9 @@ public class CS2001_Timeline extends AppCompatActivity {
         assessment.setText(assessmentInformation.get(0));
         counter = (TextView) findViewById(R.id.Counter);
         counter.setText((readHours.get(0)));
+        Addhours = (TextView) findViewById(R.id.Addhours);
+        PlusCount = (TextView) findViewById(R.id.PlusCount);
+        MinusCount = (TextView) findViewById(R.id.MinusCount);
         /*String date = assessmentInformation.get(1);
         scanner = new Scanner(date);
         String newdate  = "14/03/2020";//scanner.next("\\d+/\\d+/\\d+");*/
@@ -110,6 +114,10 @@ public class CS2001_Timeline extends AppCompatActivity {
                         if (days >= sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
                     } else {
                         tvEvent.setVisibility(View.VISIBLE);
+                        Addhours.setVisibility(View.INVISIBLE);
+                        counter.setVisibility(View.INVISIBLE);
+                        PlusCount.setVisibility(View.INVISIBLE);
+                        MinusCount.setVisibility(View.INVISIBLE);
                         tvEvent.setText("This assessment has ended!");
                         textViewGone();
                         enoughtime.setBackgroundColor(Color.rgb(255,0,0));

@@ -161,7 +161,7 @@
         app:layout_constraintVertical_bias="0.081" />
 
     <TextView
-        android:id="@+id/textView37"
+        android:id="@+id/Addhours"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add your hours:"

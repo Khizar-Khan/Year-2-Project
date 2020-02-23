@@ -17,10 +17,19 @@ import org.w3c.dom.Text;
 
 public class CS2005_Timeline extends AppCompatActivity {
 
-    private TextView txtTimerDay, txtTimerDay2, txtTimerHour, txtTimerHour2, txtTimerMinute, txtTimerMinute2, txtTimerSecond, txtTimerSecond2, assessment, assessment2, enoughtime, enoughtime2;
+    private TextView txtTimerDay, txtTimerDay2, txtTimerHour, txtTimerHour2, txtTimerMinute, txtTimerMinute2, txtTimerSecond, txtTimerSecond2, assessment, assessment2, enoughtime, enoughtime2, counter, counter2;
     private TextView tvEvent, tvEvent2;
+    private TextView Addhours, Addhours2, PlusCount, PlusCount2, MinusCount, MinusCount2;
     private Handler handler;
     private Runnable runnable;
+
+    MySQLConnector2 sqlConnector2 = new MySQLConnector2();
+    ArrayList<String> assignmentHours = sqlConnector2.AssignmentHours();
+    ArrayList<String> readHours = sqlConnector2.ReadHours();
+    public int currentCount = Integer.valueOf(readHours.get(6));
+    public int currentCount2 = Integer.valueOf(readHours.get(7));
+    public int sghours = Integer.valueOf(assignmentHours.get(6));
+    public int sghours2 = Integer.valueOf(assignmentHours.get(7));
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +47,11 @@ public class CS2005_Timeline extends AppCompatActivity {
         assessment = (TextView) findViewById(R.id.Assessment_name);
         assessment.setText(assessmentInformation.get(18));
         tvEvent = (TextView) findViewById(R.id.tvEvent);
+        counter = (TextView) findViewById(R.id.Counter);
+        counter.setText((readHours.get(6)));
+        Addhours = (TextView) findViewById(R.id.Addhours);
+        PlusCount = (TextView) findViewById(R.id.PlusCount);
+        MinusCount = (TextView) findViewById(R.id.MinusCount);
 
         txtTimerDay2 = (TextView) findViewById(R.id.txtTimerDay2);
         txtTimerHour2 = (TextView) findViewById(R.id.txtTimerHour2);
@@ -47,8 +61,50 @@ public class CS2005_Timeline extends AppCompatActivity {
         assessment2 = (TextView) findViewById(R.id.Assessment_name2);
         assessment2.setText(assessmentInformation.get(21));
         tvEvent2 = (TextView) findViewById(R.id.tvEvent2);
+        counter2 = (TextView) findViewById(R.id.Counter2);
+        counter2.setText((readHours.get(7)));
+        Addhours2 = (TextView) findViewById(R.id.Addhours2);
+        PlusCount2 = (TextView) findViewById(R.id.PlusCount2);
+        MinusCount2 = (TextView) findViewById(R.id.MinusCount2);
+
         countDownStart();
     }
+
+    public void PlusCounter(View view)
+    {
+        //int currentCount = 0;
+
+        currentCount = currentCount + 1;
+        String newcount = String.valueOf(currentCount);
+        sqlConnector2.UpdateHours(7, currentCount);
+        counter.setText(newcount);
+    }
+    public void MinusCounter (View view){
+
+        //int currentCount = 0;
+        currentCount = currentCount - 1;
+        String newcount = String.valueOf(currentCount);
+        sqlConnector2.UpdateHours(7,currentCount);
+        counter.setText(newcount);
+    }
+    public void PlusCounter2(View view)
+    {
+        //int currentCount = 0;
+
+        currentCount2 = currentCount2 + 1;
+        String newcount = String.valueOf(currentCount2);
+        sqlConnector2.UpdateHours(8, currentCount2);
+        counter2.setText(newcount);
+    }
+    public void MinusCounter2 (View view){
+
+        //int currentCount = 0;
+        currentCount2 = currentCount2 - 1;
+        String newcount = String.valueOf(currentCount2);
+        sqlConnector2.UpdateHours(8,currentCount2);
+        counter2.setText(newcount);
+    }
+
     public void countDownStart() {
         handler = new Handler();
         runnable = new Runnable() {
@@ -61,8 +117,6 @@ public class CS2005_Timeline extends AppCompatActivity {
                             "dd/MM/yyyy");
                     MySQLConnector sqlConnector = new MySQLConnector();
                     ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
-                    String sghour = "60";
-                    int sghours = Integer.parseInt(sghour);
                     String date = assessmentInformation.get(19);
                     Date futureDate = dateFormat.parse(date);
                     Date currentDate = new Date();
@@ -83,11 +137,15 @@ public class CS2005_Timeline extends AppCompatActivity {
                                 + String.format("%02d", minutes));
                         txtTimerSecond.setText(""
                                 + String.format("%02d", seconds));
-                        if ((days * 2)< sghours){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
-                        if (((days * 2)>= sghours)&&(days < sghours)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
-                        if (days >= sghours){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
+                        if ((days * 2)< sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
+                        if (((days * 2)>= sghours-currentCount)&&(days < sghours-currentCount)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
+                        if (days >= sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
                     } else {
                         tvEvent.setVisibility(View.VISIBLE);
+                        Addhours.setVisibility(View.INVISIBLE);
+                        counter.setVisibility(View.INVISIBLE);
+                        PlusCount.setVisibility(View.INVISIBLE);
+                        MinusCount.setVisibility(View.INVISIBLE);
                         tvEvent.setText("This assessment has ended!");
                         textViewGone();
                         enoughtime.setBackgroundColor(Color.rgb(255,0,0));
@@ -101,8 +159,6 @@ public class CS2005_Timeline extends AppCompatActivity {
                             "dd/MM/yyyy");
                     MySQLConnector sqlConnector = new MySQLConnector();
                     ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
-                    String sghour = "60";
-                    int sghours = Integer.parseInt(sghour);
                     String date = assessmentInformation.get(22);
                     Date futureDate = dateFormat.parse(date);
                     Date currentDate = new Date();
@@ -123,11 +179,15 @@ public class CS2005_Timeline extends AppCompatActivity {
                                 + String.format("%02d", minutes));
                         txtTimerSecond2.setText(""
                                 + String.format("%02d", seconds));
-                        if ((days * 2)< sghours){enoughtime2.setBackgroundColor(Color.rgb(255,0,0));}
-                        if (((days * 2)>= sghours)&&(days < sghours)){enoughtime2.setBackgroundColor(Color.rgb(255,255,0));}
-                        if (days >= sghours){enoughtime2.setBackgroundColor(Color.rgb(0,255,0));}
+                        if ((days * 2)< sghours2-currentCount2){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
+                        if (((days * 2)>= sghours2-currentCount2)&&(days < sghours2-currentCount2)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
+                        if (days >= sghours2-currentCount2){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
                     } else {
                         tvEvent2.setVisibility(View.VISIBLE);
+                        Addhours2.setVisibility(View.INVISIBLE);
+                        counter2.setVisibility(View.INVISIBLE);
+                        PlusCount2.setVisibility(View.INVISIBLE);
+                        MinusCount2.setVisibility(View.INVISIBLE);
                         tvEvent2.setText("This assessment has ended!");
                         textViewGone();
                         enoughtime2.setBackgroundColor(Color.rgb(255,0,0));

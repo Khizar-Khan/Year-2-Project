@@ -66,7 +66,7 @@ public class MySQLConnector2 {
 
             while (rs.next())
             {
-                assignmentHours.add(rs.getString(1));
+
                 assignmentHours.add(rs.getString(2));
 
             }
