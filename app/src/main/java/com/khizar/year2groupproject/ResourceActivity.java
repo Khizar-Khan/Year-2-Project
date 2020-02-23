@@ -325,8 +325,7 @@ public class ResourceActivity extends AppCompatActivity {
         });assessment_resourcesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AssessmentResourceActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(ResourceActivity.this, AssessmentResourceActivity.class));
 
             }
         });

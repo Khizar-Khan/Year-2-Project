@@ -409,6 +409,25 @@ tools:context=".AssessmentResourceActivity">
                 android:textSize="11sp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="580dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/second_mainmenuButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#303030"
+                android:text="Main Menu"
+                android:textColor="#FFFFFF"
+                android:visibility="visible" />
+        </LinearLayout>
+
     </RelativeLayout>
 </LinearLayout>
 
