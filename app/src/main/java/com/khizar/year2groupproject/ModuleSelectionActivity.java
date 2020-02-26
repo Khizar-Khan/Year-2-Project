@@ -52,4 +52,10 @@ public class ModuleSelectionActivity extends AppCompatActivity
         Intent intent = new Intent(getApplicationContext(), ToDoListActivity.class);
         startActivity(intent);
     }
+
+    public void reminderSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), ReminderActivity.class);
+        startActivity(intent);
+    }
 }
