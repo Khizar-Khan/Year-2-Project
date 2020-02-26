@@ -31,4 +31,6 @@ public class EditPlacementProgressActivity extends AppCompatActivity {
         myAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner3.setAdapter(myAdapter2);
     }
+
+
 }
