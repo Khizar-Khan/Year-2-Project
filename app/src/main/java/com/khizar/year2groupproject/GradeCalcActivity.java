@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.tabs.TabLayout;
 
 import java.text.DecimalFormat;
@@ -16,7 +16,6 @@ import java.text.DecimalFormat;
 public class GradeCalcActivity extends AppCompatActivity
 {
     private TabLayout tabLayout;
-    private AppBarLayout appBarLayout;
     private ViewPager viewPager;
 
     @Override
@@ -25,7 +24,6 @@ public class GradeCalcActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade_calc);
         tabLayout = findViewById(R.id.tablayout);
-        appBarLayout = findViewById(R.id.appbar);
         viewPager = findViewById(R.id.viewpager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
 
@@ -46,16 +44,32 @@ public class GradeCalcActivity extends AppCompatActivity
         EditText mCS2001GradeET = findViewById(R.id.cs2001GradeET);
         EditText mCS2002GradeET = findViewById(R.id.cs2002GradeET);
         EditText mCS2003GradeET = findViewById(R.id.cs2003GradeET);
-        EditText mCS20046GradeET = findViewById(R.id.cs20046GradeET);
-        EditText mCS20057GradeET = findViewById(R.id.cs20057GradeET);
+        EditText mCS2004GradeET = findViewById(R.id.cs2004GradeET);
+        EditText mCS2005GradeET = findViewById(R.id.cs2005GradeET);
 
-        String cs2001Grade = mCS2001GradeET.getText().toString();
-        String cs2002Grade = mCS2002GradeET.getText().toString();
-        String cs2003Grade = mCS2003GradeET.getText().toString();
-        String cs20046Grade = mCS20046GradeET.getText().toString();
-        String cs20057Grade = mCS20057GradeET.getText().toString();
+        String cs2001Grade;
+        String cs2002Grade;
+        String cs2003Grade;
+        String cs2004Grade;
+        String cs2005Grade;
 
-        double grade = gradeCalculateAlg(Double.valueOf(cs2001Grade), Double.valueOf(cs2002Grade), Double.valueOf(cs2003Grade), Double.valueOf(cs20046Grade), Double.valueOf(cs20057Grade));
+        double grade = 0.0;
+
+        try
+        {
+            cs2001Grade = mCS2001GradeET.getText().toString();
+            cs2002Grade = mCS2002GradeET.getText().toString();
+            cs2003Grade = mCS2003GradeET.getText().toString();
+            cs2004Grade = mCS2004GradeET.getText().toString();
+            cs2005Grade = mCS2005GradeET.getText().toString();
+
+            grade = gradeCalculateAlg(Double.valueOf(cs2001Grade), Double.valueOf(cs2002Grade), Double.valueOf(cs2003Grade), Double.valueOf(cs2004Grade), Double.valueOf(cs2005Grade));
+        }
+        catch(Exception e)
+        {
+            Toast.makeText(GradeCalcActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
+        }
+
 
         if(grade <= 29.49)
         {
@@ -144,12 +158,25 @@ public class GradeCalcActivity extends AppCompatActivity
         EditText mCurrentGradeET = findViewById(R.id.currentGradeET);
         EditText mWeightOfFinalET = findViewById(R.id.weightOfFinalET);
 
-        String desiredGrade = mDesiredGradeET.getText().toString();
-        String currentGrade = mCurrentGradeET.getText().toString();
-        String weightOfFinal = mWeightOfFinalET.getText().toString();
+        String desiredGrade;
+        String currentGrade;
+        String weightOfFinal;
 
-        double gradeNeeded = targetGradeCalculateAlg(Double.valueOf(desiredGrade), Double.valueOf(currentGrade), Double.valueOf(weightOfFinal));
-        mGradeNeededTXT.setText(decimalFormat.format(gradeNeeded) + "%");
+        double gradeNeeded = 0.0;
+
+        try
+        {
+            desiredGrade = mDesiredGradeET.getText().toString();
+            currentGrade = mCurrentGradeET.getText().toString();
+            weightOfFinal = mWeightOfFinalET.getText().toString();
+
+            gradeNeeded = targetGradeCalculateAlg(Double.valueOf(desiredGrade), Double.valueOf(currentGrade), Double.valueOf(weightOfFinal));
+            mGradeNeededTXT.setText(decimalFormat.format(gradeNeeded) + "%");
+        }
+        catch(Exception e)
+        {
+            Toast.makeText(GradeCalcActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public double gradeCalculateAlg(double cs2001Grade, double cs2002Grade, double cs2003Grade, double cs20046Grade, double cs20057Grade)

@@ -13,17 +13,16 @@ import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
@@ -74,10 +73,6 @@ public class ResourceActivity extends AppCompatActivity {
     StorageReference ref;
 
     private WebView web_view;
-    private FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-    private DatabaseReference reference = firebaseDatabase.getReference();
-    private DatabaseReference childReference;
-
 
 
     @Override
@@ -115,7 +110,6 @@ public class ResourceActivity extends AppCompatActivity {
         resourceButtonM6c = findViewById(R.id.resourceButtonM6c);
         resourceButtonM6d = findViewById(R.id.resourceButtonM6d);
 
-
         resourceButtonM7a = findViewById(R.id.resourceButtonM7a);
         resourceButtonM7b = findViewById(R.id.resourceButtonM7b);
         resourceButtonM7c = findViewById(R.id.resourceButtonM7c);
@@ -124,6 +118,31 @@ public class ResourceActivity extends AppCompatActivity {
         mainmenuButton = findViewById(R.id.mainmenuButton);
         gobackButton = findViewById(R.id.gobackButton);
 
+        TextView textView_m1 = findViewById(R.id.textView_Resources_M1);
+        TextView textView_m2 = findViewById(R.id.textView_Resources_M2);
+        TextView textView_m3 = findViewById(R.id.textView_Resources_M3);
+        TextView textView_m4 = findViewById(R.id.textView_Resources_M4);
+        TextView textView_m5 = findViewById(R.id.textView_Resources_M5);
+
+        MySQLConnector sqlConnector = new MySQLConnector();
+        final ArrayList<String> ResourcesData = sqlConnector.readResourcesData();
+
+        textView_m1.setText(ResourcesData.get(0));
+        textView_m2.setText(ResourcesData.get(6));
+        textView_m3.setText(ResourcesData.get(12));
+        textView_m4.setText(ResourcesData.get(18));
+        textView_m5.setText(ResourcesData.get(24));
+
+        resourceButtonM1c.setText(ResourcesData.get(1));
+        resourceButtonM1d.setText(ResourcesData.get(4));
+        resourceButtonM2c.setText(ResourcesData.get(7));
+        resourceButtonM2d.setText(ResourcesData.get(10));
+        resourceButtonM3c.setText(ResourcesData.get(13));
+        resourceButtonM3d.setText(ResourcesData.get(16));
+        resourceButtonM4c.setText(ResourcesData.get(19));
+        resourceButtonM4d.setText(ResourcesData.get(22));
+        resourceButtonM5c.setText(ResourcesData.get(25));
+        resourceButtonM5d.setText(ResourcesData.get(28));
 
 
         resourceButtonM1a.setOnClickListener(new View.OnClickListener() {
@@ -189,220 +208,92 @@ public class ResourceActivity extends AppCompatActivity {
         resourceButtonM1c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(2));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM1c");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM1d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(5));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM1d");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM2c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(8));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM2c");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM2d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(11));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM2d");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM3c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(14));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM3c");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM3d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(17));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM3d");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM4c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(20));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM4c");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM4d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(23));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM4d");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM5c.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(26));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM5c");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
-
-
         });resourceButtonM5d.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String resource_web = (ResourcesData.get(29));
+                web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 gobackButton.setVisibility(View.VISIBLE);
-                childReference = reference.child("resourceM5d");
-                childReference.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String message = dataSnapshot.getValue(String.class);
-                        web_view.loadUrl(message);
-                        Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                    }
-                });
+                Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
 
 
@@ -420,7 +311,6 @@ public class ResourceActivity extends AppCompatActivity {
 
             }
         });
-
 
     }
 

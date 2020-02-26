@@ -12,6 +12,8 @@ import java.util.ArrayList;
 
 public class MySQLConnector
 {
+
+
     FirebaseAuth fAuth =  FirebaseAuth.getInstance();
     String userID = fAuth.getCurrentUser().getUid();
 
@@ -171,6 +173,170 @@ public class MySQLConnector
             System.out.println(e);
         }
         return userGrades;
+    }
+
+    public static ArrayList<String> readTimetableDayData(String Day, int GroupNumber)
+    {
+        enableStrictMode();
+
+        ArrayList<String> DayDataInformation = new ArrayList<>();
+
+        try
+        {
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/TimetableData";
+            Connection con = DriverManager.getConnection( url,"Augustas","Augustas");
+            Statement select = con.createStatement();
+
+            ResultSet resultset;
+
+
+
+            if(Day=="Monday")
+            {
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Monday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    DayDataInformation.add(resultset.getString(1));
+                }
+            }
+            else if(Day == "Tuesday")
+            {
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Tuesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    DayDataInformation.add(resultset.getString(1));
+                }
+            }
+            else if(Day == "Wednesday")
+            {
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Wednesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    DayDataInformation.add(resultset.getString(1));
+                }
+            }
+            else if(Day == "Thursday")
+            {
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Thursday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    DayDataInformation.add(resultset.getString(1));
+                }
+            }
+            else if(Day == "Friday")
+            {
+                resultset = select.executeQuery("SELECT ModuleName FROM Modules WHERE Day LIKE '%Friday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    DayDataInformation.add(resultset.getString(1));
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return DayDataInformation;
+    }
+
+    public static ArrayList<String> readTimetableTimeData(String Day, int GroupNumber)
+    {
+        enableStrictMode();
+
+        ArrayList<String> TimeInformation = new ArrayList<>();
+
+        try
+        {
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/TimetableData";
+            Connection con = DriverManager.getConnection( url,"Augustas","Augustas");
+            Statement select = con.createStatement();
+
+            ResultSet resultset;
+            if(Day=="Monday")
+            {
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Monday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
+
+                }
+            }
+            else if(Day == "Tuesday")
+            {
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Tuesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
+                }
+            }
+            else if(Day == "Wednesday")
+            {
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Wednesday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
+                }
+            }
+            else if(Day == "Thursday")
+            {
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Thursday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
+                }
+            }
+            else if(Day == "Friday")
+            {
+                resultset = select.executeQuery("SELECT DATE_FORMAT(StartTime, '%k:%i') , DATE_FORMAT(EndTime, '%k:%i') FROM Modules WHERE Day LIKE '%Friday%' AND cast(GroupNumber as CHAR) LIKE '"+GroupNumber+"'");
+                while (resultset.next())
+                {
+                    TimeInformation.add(resultset.getString(1) + " - " + resultset.getString(2));
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+        return TimeInformation;
+    }
+
+    public ArrayList<String> readResourcesData()
+    {
+        enableStrictMode();
+
+        ArrayList<String> ResourcesData = new ArrayList<>();
+
+        try
+        {
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/ResourcesData";
+            Connection con = DriverManager.getConnection( url,"Vignesh","Vignesh");
+            Statement select = con.createStatement();
+
+            // Execute a quesry
+            ResultSet rs = select.executeQuery("SELECT Module_Code, Resource_Name, Resource_URL FROM WebsiteResources");
+
+            while (rs.next())
+            {
+                ResourcesData.add(rs.getString(1));
+                ResourcesData.add(rs.getString(2));
+                ResourcesData.add(rs.getString(3));
+            }
+        }
+        catch(Exception e)
+        {
+            System.out.println(e);
+        }
+        return ResourcesData;
     }
 
     public static void enableStrictMode()

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:background="@drawable/gradient_background"
+    android:background="@color/colorPrimaryDark"
     tools:context=".ResourceActivity">
 
 
@@ -54,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:text="CS2001"
+                    android:text="TextView"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -73,9 +73,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - The Fourth Paradigm"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -92,9 +92,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - UML 2 in Action"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -110,9 +110,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - eu.udacity.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -129,9 +129,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - hubspot.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -146,7 +146,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:text="CS2002"
+                    android:text="TextView"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -165,9 +165,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - Sommerville: Software Engineering"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -184,9 +184,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - Software Engineering Theory and Practice"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -202,9 +202,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - guru99.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -221,9 +221,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - geeksforgeeks.org"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -238,7 +238,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:text="CS2003"
+                    android:text="TextView"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -258,9 +258,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - Interaction Design:  Beyond HCI"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -277,9 +277,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - The Design of Everyday Things"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -295,9 +295,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - tutorialspoint.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -314,9 +314,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - asktog.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -331,7 +331,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:text="CS2004"
+                    android:text="TextView"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -350,9 +350,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - Data Structures and Algorithms in Java"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -369,9 +369,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - How to Solve it Modern Heuristics"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -387,9 +387,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - khanacademy.org"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -406,9 +406,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="javaworld.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -423,7 +423,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:text="CS2005"
+                    android:text="TextView"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -442,9 +442,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - Computer Networking A Top Down Approach"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -461,9 +461,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Book - Operating System Concepts"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -479,9 +479,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - virtualbox.org"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -498,9 +498,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
-                    android:text="Website - ubuntu.com"
-                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Text"
+                    android:textColor="@android:color/secondary_text_light"
                     android:textSize="11sp" />
             </LinearLayout>
 
@@ -532,9 +532,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Main Menu"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:visibility="visible" />
             </LinearLayout>
 
@@ -552,9 +552,9 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:background="#303030"
+                    android:background="@drawable/background_resource_button"
                     android:text="Go Back"
-                    android:textColor="#FFFFFF"
+                    android:textColor="@android:color/secondary_text_light"
                     android:visibility="visible" />
             </LinearLayout>
 

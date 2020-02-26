@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.khizar.year2groupproject.MainActivity">
     <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:orderInCategory="0"
+        android:title="@string/Refresh"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/home"
         android:icon="@drawable/home_button"
         android:orderInCategory="1"

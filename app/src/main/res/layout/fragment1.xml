@@ -179,7 +179,7 @@
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <EditText
-                        android:id="@+id/cs20046GradeET"
+                        android:id="@+id/cs2004GradeET"
                         android:layout_width="85dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
@@ -210,7 +210,7 @@
                     android:layout_height="match_parent">
 
                     <EditText
-                        android:id="@+id/cs20057GradeET"
+                        android:id="@+id/cs2005GradeET"
                         android:layout_width="85dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="3dp"
