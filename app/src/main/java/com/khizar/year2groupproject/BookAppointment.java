@@ -7,17 +7,17 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class ChatActivity extends AppCompatActivity {
+public class BookAppointment extends AppCompatActivity {
     private WebView webView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.activity_book_appointment);
 
-        webView = (WebView) findViewById(R.id.webview);
+        webView = (WebView) findViewById(R.id.webview1);
         webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("https://webapps.brunel.ac.uk/apps/jobs-search/UI/pages/results.aspx?sysSection=2&sort=datecreated&rpp=10&type=1+Year+Placement&rel=Dept+of+Computer+Science&filter=2");
+        webView.loadUrl("https://webapps.brunel.ac.uk/apps/pcc-appointment/UI/pages/login.aspx?sysSection=1");
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -32,3 +32,4 @@ public class ChatActivity extends AppCompatActivity {
         }
     }
 }
+

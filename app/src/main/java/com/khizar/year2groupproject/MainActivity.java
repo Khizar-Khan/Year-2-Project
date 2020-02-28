@@ -79,9 +79,9 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void chatSelection(View view)
+    public void industryPlacementsSelection(View view)
     {
-        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
+        Intent intent = new Intent(getApplicationContext(), IndustryPlacementsActivity.class);
         startActivity(intent);
     }
 

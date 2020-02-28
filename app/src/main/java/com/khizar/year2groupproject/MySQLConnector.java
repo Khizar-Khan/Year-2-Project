@@ -339,6 +339,31 @@ public class MySQLConnector
         return ResourcesData;
     }
 
+    public void industrySQLconnect()
+    {
+        enableStrictMode();
+        try
+        {
+            Statement stmt;
+
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/UserPlacementStatistics";
+            Connection con = DriverManager.getConnection( url,"Mznk","Mznk");
+
+            //Get a Statement object
+            stmt = con.createStatement();
+
+            //Insert user id
+            stmt.executeUpdate("INSERT INTO PlacementProgress(id, email, CVComp, CoverLComp, NoOfPlacements, InterviewsPending, JobOffers) VALUES(1,'1706960@brunel.ac.uk',1,1,4,2,0)");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
     public static void enableStrictMode()
     {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
