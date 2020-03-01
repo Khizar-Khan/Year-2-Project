@@ -66,23 +66,28 @@
         <activity
             android:name=".CS2005Activity"
             android:label="@string/action_five"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true" />
         <activity
             android:name=".CS2004Activity"
             android:label="@string/action_four"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true" />
         <activity
             android:name=".CS2003Activity"
             android:label="@string/action_three"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"/>
         <activity
             android:name=".CS2002Activity"
             android:label="@string/action_two"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"/>
         <activity
             android:name=".CS2001Activity"
             android:label="@string/action_one"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

@@ -320,5 +320,10 @@ public class CS2005Activity extends AppCompatActivity {
 
         };
         handler.postDelayed(runnable, 1 * 1000);
+
+    }
+    protected void onStop() {
+        super.onStop();
+        handler.removeCallbacks(runnable);
     }
 }
