@@ -10,12 +10,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+
+import java.util.ArrayList;
 
 import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
@@ -78,6 +81,22 @@ public class AssessmentResourceActivity extends AppCompatActivity {
 
         second_mainmenuButton = findViewById(R.id.second_mainmenuButton);
         second_gobackButton = findViewById(R.id.second_gobackButton);
+
+        TextView textView_assessment_m1 = findViewById(R.id.textView_AssessmentResources_M1);
+        TextView textView_assessment_m2 = findViewById(R.id.textView_AssessmentResources_M2);
+        TextView textView_assessment_m3 = findViewById(R.id.textView_AssessmentResources_M3);
+        TextView textView_assessment_m4 = findViewById(R.id.textView_AssessmentResources_M4);
+        TextView textView_assessment_m5 = findViewById(R.id.textView_AssessmentResources_M5);
+
+        MySQLConnector sqlConnector = new MySQLConnector();
+        final ArrayList<String> ResourcesData = sqlConnector.readResourcesData();
+
+        textView_assessment_m1.setText(ResourcesData.get(0));
+        textView_assessment_m2.setText(ResourcesData.get(6));
+        textView_assessment_m3.setText(ResourcesData.get(12));
+        textView_assessment_m4.setText(ResourcesData.get(18));
+        textView_assessment_m5.setText(ResourcesData.get(24));
+
 
         assessment_resourceButtonM1a.setOnClickListener(new View.OnClickListener() {
             @Override
