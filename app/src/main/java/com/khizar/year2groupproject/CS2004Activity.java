@@ -228,13 +228,21 @@ public class CS2004Activity extends AppCompatActivity {
             @Override
             public void run() {
 
+                MySQLConnector sqlConnector = new MySQLConnector();
+                ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
+                int displayCount = currentCount;
+                int displayCount2 = currentCount2;
+                int displayHours = sghours;
+                int displayHours2 = sghours2;
+                DateFormat dateFormat = new SimpleDateFormat(
+                        "dd/MM/yyyy");
+
+                String date = assessmentInformation.get(13);
+                String date2 = assessmentInformation.get(16);
+
                 handler.postDelayed(this, 1000);
                 try {
-                    DateFormat dateFormat = new SimpleDateFormat(
-                            "dd/MM/yyyy");
-                    MySQLConnector sqlConnector = new MySQLConnector();
-                    ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
-                    String date = assessmentInformation.get(13);
+
                     Date futureDate = dateFormat.parse(date);
                     Date currentDate = new Date();
 
@@ -254,9 +262,9 @@ public class CS2004Activity extends AppCompatActivity {
                                 + String.format("%02d", minutes));
                         txtTimerSecond.setText(""
                                 + String.format("%02d", seconds));
-                        if ((days * 2)< sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
-                        if (((days * 2)>= sghours-currentCount)&&(days < sghours-currentCount)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
-                        if (days >= sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
+                        if ((days * 2)< displayHours-displayCount){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
+                        if (((days * 2)>= displayHours-displayCount)&&(days < displayHours-displayCount)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
+                        if (days >= displayHours-displayCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
                     } else {
                         tvEvent.setVisibility(View.VISIBLE);
                         Addhours.setVisibility(View.INVISIBLE);
@@ -271,14 +279,8 @@ public class CS2004Activity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 try {
-                    DateFormat dateFormat = new SimpleDateFormat(
-                            "dd/MM/yyyy");
-                    MySQLConnector sqlConnector = new MySQLConnector();
-                    ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
-                    String sghour = "60";
-                    int sghours = Integer.parseInt(sghour);
-                    String date = assessmentInformation.get(16);
-                    Date futureDate = dateFormat.parse(date);
+
+                    Date futureDate = dateFormat.parse(date2);
                     Date currentDate = new Date();
 
                     if (!currentDate.after(futureDate)) {
@@ -297,9 +299,9 @@ public class CS2004Activity extends AppCompatActivity {
                                 + String.format("%02d", minutes));
                         txtTimerSecond2.setText(""
                                 + String.format("%02d", seconds));
-                        if ((days * 2)< sghours2-currentCount2){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
-                        if (((days * 2)>= sghours2-currentCount2)&&(days < sghours2-currentCount2)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
-                        if (days >= sghours2-currentCount2){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
+                        if ((days * 2)< displayHours2-displayCount2){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
+                        if (((days * 2)>= displayHours2-displayCount2)&&(days < displayHours2-displayCount2)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
+                        if (days >= displayHours2-displayCount2){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
                     } else {
                         tvEvent2.setVisibility(View.VISIBLE);
                         Addhours2.setVisibility(View.INVISIBLE);

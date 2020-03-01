@@ -34,6 +34,7 @@ public class CS2001Activity extends AppCompatActivity
     public int currentCount = Integer.valueOf(readHours.get(0));
     public int sghours = Integer.valueOf(assignmentHours.get(0));
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -193,14 +194,18 @@ public class CS2001Activity extends AppCompatActivity
         runnable = new Runnable() {
             @Override
             public void run() {
+                MySQLConnector sqlConnector = new MySQLConnector();
+                ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
+                int displayCount = currentCount;
+                int displayHours = sghours;
+                DateFormat dateFormat = new SimpleDateFormat(
+                        "dd/MM/yyyy");
+
+                String date = assessmentInformation.get(1);
+
 
                 handler.postDelayed(this, 1000);
                 try {
-                    DateFormat dateFormat = new SimpleDateFormat(
-                            "dd/MM/yyyy");
-                    MySQLConnector sqlConnector = new MySQLConnector();
-                    ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
-                    String date = assessmentInformation.get(1);
                     Date futureDate = dateFormat.parse(date);
                     Date currentDate = new Date();
 
@@ -220,9 +225,9 @@ public class CS2001Activity extends AppCompatActivity
                                 + String.format("%02d", minutes));
                         txtTimerSecond.setText(""
                                 + String.format("%02d", seconds));
-                        if ((days * 2)< sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
-                        if (((days * 2)>= sghours-currentCount)&&(days < sghours-currentCount)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
-                        if (days >= sghours-currentCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
+                        if ((days * 2)< displayHours-displayCount){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
+                        if (((days * 2)>= displayHours-displayCount)&&(days < displayHours-displayCount)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
+                        if (days >= displayHours-displayCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
                     } else {
                         tvEvent.setVisibility(View.VISIBLE);
                         Addhours.setVisibility(View.GONE);
@@ -240,5 +245,10 @@ public class CS2001Activity extends AppCompatActivity
             }
         };
         handler.postDelayed(runnable, 1 * 1000);
+    }
+    @Override
+    public void onBackPressed() {
+        setResult(RESULT_CANCELED);
+        super.onBackPressed();
     }
 }
