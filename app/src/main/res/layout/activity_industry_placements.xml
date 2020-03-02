@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/ScrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -113,6 +122,17 @@
         android:textColor="@android:color/background_light"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/textView47"
+        android:layout_alignBottom="@id/textView47"
+        android:layout_alignParentLeft="false"
+        android:layout_centerHorizontal="false"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
     <Button
         android:id="@+id/button5"
         android:layout_width="wrap_content"
@@ -137,10 +157,88 @@
         android:textSize="24sp" />
 
     <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView46"
+        android:text="No. of Applications?"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView51"
+        android:text="No. of Interviews?"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView55"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView54"
+        android:text="No. Job Offers?"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
         android:id="@+id/textView46"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView44" />
 
+    <TextView
+        android:id="@+id/textView49"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView48"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="-2dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView53"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/textView52"
+        android:layout_alignBottom="@id/textView48"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="87dp"
+        android:layout_marginRight="-188dp"
+        android:layout_marginBottom="-53dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView56"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/textView55"
+        android:layout_alignBottom="@id/textView48"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="86dp"
+        android:layout_marginRight="-213dp"
+        android:layout_marginBottom="-106dp"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView47" />
+
+    <TextView
+        android:id="@+id/textView54"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView52" />
+
 
 </RelativeLayout>
+
+</ScrollView>

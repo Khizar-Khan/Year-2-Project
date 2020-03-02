@@ -113,6 +113,15 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
 
                             TextView CvrLtrText = (TextView) findViewById(R.id.textView45);
                             CvrLtrText.setText(COVERLCOMPYN);
+
+                            TextView NoAppsText = (TextView) findViewById(R.id.textView49);
+                            NoAppsText.setText(Integer.toString(NoOfPlacements));
+
+                            TextView NoIntevsText = (TextView) findViewById(R.id.textView53);
+                            NoIntevsText.setText(Integer.toString(InterviewsPending));
+
+                            TextView JobOffersText = (TextView) findViewById(R.id.textView56);
+                            JobOffersText.setText(Integer.toString(JobOffers));
                         }
                     }
                     catch (Exception e) {
