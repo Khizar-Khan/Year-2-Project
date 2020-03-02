@@ -527,6 +527,26 @@
                 android:orientation="vertical">
 
                 <Button
+                    android:id="@+id/assessment_resourcesButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/background_resource_button"
+                    android:text="Assessment Resources"
+                    android:textColor="@android:color/secondary_text_light"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="620dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <Button
                     android:id="@+id/mainmenuButton"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -542,7 +562,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="620dp"
+                android:layout_marginTop="580dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
@@ -555,7 +575,7 @@
                     android:background="@drawable/background_resource_button"
                     android:text="Go Back"
                     android:textColor="@android:color/secondary_text_light"
-                    android:visibility="visible" />
+                    android:visibility="invisible" />
             </LinearLayout>
 
 
