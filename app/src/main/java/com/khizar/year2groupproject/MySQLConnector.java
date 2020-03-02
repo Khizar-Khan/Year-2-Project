@@ -358,7 +358,7 @@ public class MySQLConnector
             stmt = con.createStatement();
 
             //Insert user id
-            stmt.executeUpdate("INSERT INTO PlacementProgress(id, email, CVComp, CoverLComp, NoOfPlacements, InterviewsPending, JobOffers) VALUES('"+a+"','"+userID+"','"+b+"','"+c+"','"+d+"','"+e1+"','"+f+"')");
+            stmt.executeUpdate("INSERT INTO PlacementProgress(id, email, CVComp, CoverLComp, NoOfPlacements, InterviewsPending, JobOffers) VALUES('"+a+"','"+userID+"','"+b+"','"+c+"','"+d+"','"+e1+"','"+f+"') ON DUPLICATE KEY UPDATE CVComp = '"+b+"', CoverLComp = '"+c+"',NoOfPlacements = '"+d+"', InterviewsPending = '"+e1+"', JobOffers = '"+f+"'");
         }
         catch (Exception e)
         {
