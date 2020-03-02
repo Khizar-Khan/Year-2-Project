@@ -40,8 +40,8 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
                 case R.id.button3:
                     Intent editPlacements = new Intent(IndustryPlacementsActivity.this, EditPlacementProgressActivity.class);
                     startActivity(editPlacements);
-                    MySQLConnector SQLConnect = new MySQLConnector();
-                    SQLConnect.industrySQLconnect();
+                    /*MySQLConnector SQLConnect = new MySQLConnector();
+                    SQLConnect.industrySQLconnect();*/
             }
         }
     };

@@ -30,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView17"
+        android:onClick="coverLCheck"
         android:text="Cover letter(s) completed?"
         android:textColor="@android:color/background_light"
         android:textSize="24sp" />
@@ -60,6 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView16"
+        android:checked="false"
+        android:onClick="CVCheck"
         android:text="CV completed?"
         android:textColor="@android:color/background_light"
         android:textSize="24sp" />
@@ -131,6 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textView26"
         android:layout_centerHorizontal="true"
+        android:onClick="buttonOnClick"
         android:text="save progress" />
 
     <TextView

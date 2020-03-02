@@ -1,6 +1,7 @@
 package com.khizar.year2groupproject;
 
 import android.os.StrictMode;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -339,7 +340,8 @@ public class MySQLConnector
         return ResourcesData;
     }
 
-    public void industrySQLconnect()
+
+    public void industrySQLconnect(int a, int b, int c, int d, int e1, int f)
     {
         enableStrictMode();
         try
@@ -356,7 +358,7 @@ public class MySQLConnector
             stmt = con.createStatement();
 
             //Insert user id
-            stmt.executeUpdate("INSERT INTO PlacementProgress(id, email, CVComp, CoverLComp, NoOfPlacements, InterviewsPending, JobOffers) VALUES(1,'1706960@brunel.ac.uk',1,1,4,2,0)");
+            stmt.executeUpdate("INSERT INTO PlacementProgress(id, email, CVComp, CoverLComp, NoOfPlacements, InterviewsPending, JobOffers) VALUES('"+a+"','"+userID+"','"+b+"','"+c+"','"+d+"','"+e1+"','"+f+"')");
         }
         catch (Exception e)
         {
