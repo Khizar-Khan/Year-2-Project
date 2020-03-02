@@ -27,15 +27,18 @@
                 android:layout_width="150dp"
                 android:layout_height="75dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="#55000000"
                 android:onClick="calculateTargetGrade"
                 android:text="CALCULATE"
                 android:textAlignment="center"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/cardView10"
-                app:layout_constraintTop_toBottomOf="@+id/cardView7" />
+                app:layout_constraintTop_toBottomOf="@+id/cardView7"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/targetModuleGradeTitleTXT"
@@ -177,10 +180,13 @@
                 android:layout_width="150dp"
                 android:layout_height="75dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/targetGradeBTN"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardView8">
+                app:layout_constraintTop_toBottomOf="@+id/cardView8"
+                app:layout_constraintVertical_bias="0.0">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"

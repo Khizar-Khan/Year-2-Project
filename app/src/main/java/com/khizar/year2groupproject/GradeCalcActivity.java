@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.google.android.material.tabs.TabLayout;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 
 public class GradeCalcActivity extends AppCompatActivity
 {
@@ -181,7 +182,17 @@ public class GradeCalcActivity extends AppCompatActivity
 
     public double gradeCalculateAlg(double cs2001Grade, double cs2002Grade, double cs2003Grade, double cs20046Grade, double cs20057Grade)
     {
-        double grade = ((cs2001Grade*40) + (cs2002Grade*20) + (cs2003Grade*20) + (cs20046Grade*20) + (cs20057Grade*20)) / 120;
+        MySQLConnector sqlConnector = new MySQLConnector();
+
+        ArrayList<String> moduleInformation = sqlConnector.readModuleInformation();
+
+        double cs2001Credits = Integer.valueOf(moduleInformation.get(3));
+        double cs2002Credits = Integer.valueOf(moduleInformation.get(8));
+        double cs2003Credits = Integer.valueOf(moduleInformation.get(13));
+        double cs2004Credits = Integer.valueOf(moduleInformation.get(18));
+        double cs2005Credits = Integer.valueOf(moduleInformation.get(23));
+
+        double grade = ((cs2001Grade*cs2001Credits) + (cs2002Grade*cs2002Credits) + (cs2003Grade*cs2003Credits) + (cs20046Grade*cs2004Credits) + (cs20057Grade*cs2005Credits)) / (cs2001Credits + cs2002Credits + cs2003Credits + cs2004Credits + cs2005Credits);
         return grade;
     }
 
