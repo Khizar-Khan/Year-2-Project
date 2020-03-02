@@ -366,6 +366,10 @@ public class MySQLConnector
         }
     }
 
+
+
+
+
     public static void enableStrictMode()
     {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();

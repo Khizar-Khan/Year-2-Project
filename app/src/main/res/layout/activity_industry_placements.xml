@@ -58,16 +58,89 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_below="@id/textView39"
         android:layout_centerInParent="true"
         android:background="@android:color/background_light" />
 
     <TextView
         android:id="@+id/textView37"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@id/divider"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:text="Your placement progress"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/divider"
-        android:text="TextView"
-        android:textColor="@android:color/background_light" />
+        android:layout_below="@id/button3" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView37" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button5"
+        android:text="Completed CV?"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView41"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/textView44"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView40"
+        android:layout_centerHorizontal="true"
+        android:text="show progress" />
+
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView41" />
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView43"
+        android:text="Cover Letter?"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView44" />
 
 
 </RelativeLayout>
