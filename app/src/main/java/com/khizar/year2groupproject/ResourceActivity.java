@@ -203,7 +203,7 @@ public class ResourceActivity extends AppCompatActivity {
         web_view.getSettings().setJavaScriptEnabled(true);
         web_view.setWebViewClient(new WebViewClient());
         web_view.setVisibility(View.GONE);
-        mainmenuButton.setVisibility(View.GONE);
+        gobackButton.setVisibility(View.GONE);
 
 
         resourceButtonM1c.setOnClickListener(new View.OnClickListener() {
@@ -213,7 +213,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM1d.setOnClickListener(new View.OnClickListener() {
@@ -223,7 +223,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM2c.setOnClickListener(new View.OnClickListener() {
@@ -233,7 +233,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM2d.setOnClickListener(new View.OnClickListener() {
@@ -243,7 +243,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM3c.setOnClickListener(new View.OnClickListener() {
@@ -253,7 +253,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM3d.setOnClickListener(new View.OnClickListener() {
@@ -263,7 +263,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM4c.setOnClickListener(new View.OnClickListener() {
@@ -273,7 +273,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM4d.setOnClickListener(new View.OnClickListener() {
@@ -283,7 +283,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM5c.setOnClickListener(new View.OnClickListener() {
@@ -293,7 +293,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
         });resourceButtonM5d.setOnClickListener(new View.OnClickListener() {
@@ -303,7 +303,7 @@ public class ResourceActivity extends AppCompatActivity {
                 web_view.loadUrl(resource_web);
                 web_view.setVisibility(View.VISIBLE);
                 assessment_resourcesButton.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.VISIBLE);
+                gobackButton.setVisibility(View.VISIBLE);
                 Toast.makeText(ResourceActivity.this, "Website Successfully Loading", Toast.LENGTH_SHORT).show();
             }
 
@@ -312,7 +312,7 @@ public class ResourceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 web_view.setVisibility(View.GONE);
-                mainmenuButton.setVisibility(View.GONE);
+                gobackButton.setVisibility(View.GONE);
                 assessment_resourcesButton.setVisibility(View.VISIBLE);
 
             }

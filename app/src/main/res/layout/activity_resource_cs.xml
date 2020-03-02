@@ -542,7 +542,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="580dp"
+                android:layout_marginTop="620dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
@@ -555,14 +555,14 @@
                     android:background="@drawable/background_resource_button"
                     android:text="Main Menu"
                     android:textColor="@android:color/secondary_text_light"
-                    android:visibility="invisible" />
+                    android:visibility="visible" />
             </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
-                android:layout_marginTop="620dp"
+                android:layout_marginTop="580dp"
                 android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
@@ -575,7 +575,7 @@
                     android:background="@drawable/background_resource_button"
                     android:text="Go Back"
                     android:textColor="@android:color/secondary_text_light"
-                    android:visibility="visible" />
+                    android:visibility="invisible" />
             </LinearLayout>
 
 
