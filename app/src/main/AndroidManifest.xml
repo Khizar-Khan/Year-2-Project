@@ -26,7 +26,6 @@
         <activity android:name=".CS2003ModuleInfoActivity" />
         <activity android:name=".CS2002ModuleInfoActivity" />
         <activity android:name=".CS2001ModuleInfoActivity" />
-        <activity android:name=".ChatActivity" />
         <activity android:name=".ToDoListActivity" />
         <activity android:name=".CS2005ToDoListActivity" />
         <activity android:name=".CS2004ToDoListActivity" />
@@ -34,7 +33,6 @@
         <activity android:name=".CS2002ToDoListActivity" />
         <activity android:name=".CS2001ToDoListActivity" />
         <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".ModuleSelectionBusinessComputingActivity" />
         <activity android:name=".ResourceActivity" />
         <activity android:name=".TimetableActivity" />
         <activity android:name=".ProfileActivity" />
@@ -57,14 +55,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity
-            android:name=".CS2007Activity"
-            android:label="@string/action_seven"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".CS2006Activity"
-            android:label="@string/action_six"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".CS2005Activity"
             android:label="@string/action_five"

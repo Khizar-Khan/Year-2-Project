@@ -213,8 +213,7 @@
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF"
-                                    android:onClick="chatSelection" />
+                                    android:background="#00FFFFFF" />
 
                                 <ImageView
                                     android:id="@+id/chatIMG"
