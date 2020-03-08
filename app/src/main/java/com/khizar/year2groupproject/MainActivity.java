@@ -44,45 +44,14 @@ public class MainActivity extends AppCompatActivity
 
     public void moduleSelection(View view)
     {
-        FirebaseAuth fAuth = FirebaseAuth.getInstance();
-        FirebaseFirestore fStore = FirebaseFirestore.getInstance();
-        String userID = fAuth.getCurrentUser().getUid();
-
-        DocumentReference documentReference = fStore.collection("users").document(userID);
-        documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>()
-        {
-            @Override
-            public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e)
-            {
-                String userCourse = documentSnapshot.getString("courseType");
-                if(userCourse.matches("Computer Science"))
-                {
-                    Intent intent = new Intent(getApplicationContext(), ModuleSelectionActivity.class);
-                    startActivity(intent);
-                }
-                else if(userCourse.matches("Business Computing"))
-                {
-                    Intent intent = new Intent(getApplicationContext(), ModuleSelectionBusinessComputingActivity.class);
-                    startActivity(intent);
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"FAILED",Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        Intent intent = new Intent(getApplicationContext(), ModuleSelectionActivity.class);
+        startActivity(intent);
     }
     public void timetableSelection(View view)
     {
         Intent intent = new Intent(getApplicationContext(), activity_group_input.class);
         startActivity(intent);
 
-    }
-
-    public void chatSelection(View view)
-    {
-        Intent intent = new Intent(getApplicationContext(), ChatActivity.class);
-        startActivity(intent);
     }
 
     public void resourceSelection(View view)
