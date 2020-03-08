@@ -5,7 +5,7 @@ xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-android:background="@drawable/gradient_background"
+android:background="@color/colorPrimaryDark"
 tools:context=".AssessmentResourceActivity">
 
 
@@ -73,9 +73,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Notes"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -92,9 +92,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Template"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -110,9 +110,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Brief"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -146,9 +146,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Material One"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -165,9 +165,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Material Two"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -183,9 +183,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Brief"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -220,9 +220,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment One Template"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -239,9 +239,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Two Template"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -257,9 +257,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Brief"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -293,9 +293,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Maths Assessment Overview"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -312,9 +312,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Task Two Brief"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -330,9 +330,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Brief"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -366,9 +366,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Tutorial Intro"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -385,9 +385,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Template"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -403,9 +403,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Assessment Brief"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:textSize="11sp" />
         </LinearLayout>
 
@@ -422,9 +422,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Main Menu"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:visibility="visible" />
         </LinearLayout>
 
@@ -441,9 +441,9 @@ tools:context=".AssessmentResourceActivity">
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Go Back"
-                android:textColor="#FFFFFF"
+                android:textColor="@android:color/secondary_text_light"
                 android:visibility="visible" />
         </LinearLayout>
 
