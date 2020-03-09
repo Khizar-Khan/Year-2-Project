@@ -51,7 +51,12 @@ public class MainActivity extends AppCompatActivity
     {
         Intent intent = new Intent(getApplicationContext(), activity_group_input.class);
         startActivity(intent);
+    }
 
+    public void industryPlacementsSelection(View view)
+    {
+        Intent intent = new Intent(getApplicationContext(), IndustryPlacementsActivity.class);
+        startActivity(intent);
     }
 
     public void resourceSelection(View view)

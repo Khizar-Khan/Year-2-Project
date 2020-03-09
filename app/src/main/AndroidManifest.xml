@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".EditPlacementProgressActivity"></activity>
+        <activity android:name=".BookAppointment" />
+        <activity android:name=".IndustryPlacementsActivity" />
         <activity android:name=".AssessmentResourceActivity"></activity>
         <activity android:name=".ReminderActivity"></activity>
         <activity android:name=".activity_group_input" />
