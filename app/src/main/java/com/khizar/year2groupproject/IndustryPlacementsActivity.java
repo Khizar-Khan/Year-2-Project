@@ -96,15 +96,15 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
                             JobOffers = rs.getInt(6);
 
                             if (CVCOMP ==1){
-                                CVCOMPYN = "YES";
+                                CVCOMPYN = "Yes";
                             } else{
-                                CVCOMPYN = "NO";
+                                CVCOMPYN = "No";
                             }
 
                             if (COVERLCOMP ==1) {
-                                COVERLCOMPYN = "YES";
+                                COVERLCOMPYN = "Yes";
                             } else {
-                                COVERLCOMPYN = "NO";
+                                COVERLCOMPYN = "No";
                             }
 
 
