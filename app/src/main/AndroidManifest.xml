@@ -12,10 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".EditPlacementProgressActivity"></activity>
+        <activity android:name=".BookAppointment" />
+        <activity android:name=".IndustryPlacementsActivity" />
         <activity android:name=".AssessmentResourceActivity"></activity>
         <activity android:name=".ReminderActivity"></activity>
         <activity android:name=".activity_group_input" />
         <activity android:name=".DayDetail" />
+        <activity android:name=".ChatActivity" />
         <activity android:name=".CS2005GradesActivity" />
         <activity android:name=".CS2004GradesActivity" />
         <activity android:name=".CS2003GradesActivity" />

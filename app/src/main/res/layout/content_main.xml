@@ -213,14 +213,15 @@
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center"
                                     android:layout_weight="1"
-                                    android:background="#00FFFFFF" />
+                                    android:background="#00FFFFFF"
+                                    android:onClick="industryPlacementsSelection" />
 
                                 <ImageView
                                     android:id="@+id/chatIMG"
                                     android:layout_width="100dp"
                                     android:layout_height="70dp"
                                     android:layout_centerInParent="true"
-                                    app:srcCompat="@drawable/chat" />
+                                    app:srcCompat="@drawable/industry" />
 
                                 <TextView
                                     android:id="@+id/chatTXT"
@@ -228,7 +229,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_below="@id/chatIMG"
                                     android:layout_centerHorizontal="true"
-                                    android:text="Chat"
+                                    android:text="Industry Placements"
                                     android:textColor="#FFFFFF"
                                     android:textSize="16sp"
                                     android:textStyle="bold" />

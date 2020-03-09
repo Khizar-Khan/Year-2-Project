@@ -1,6 +1,7 @@
 package com.khizar.year2groupproject;
 
 import android.os.StrictMode;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -338,6 +339,36 @@ public class MySQLConnector
         }
         return ResourcesData;
     }
+
+
+    public void industrySQLconnect(int a, int b, int c, int d, int e1, int f)
+    {
+        enableStrictMode();
+        try
+        {
+            Statement stmt;
+
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/UserPlacementStatistics";
+            Connection con = DriverManager.getConnection( url,"Mznk","Mznk");
+
+            //Get a Statement object
+            stmt = con.createStatement();
+
+            //Insert user id
+            stmt.executeUpdate("INSERT INTO PlacementProgress(id, email, CVComp, CoverLComp, NoOfPlacements, InterviewsPending, JobOffers) VALUES('"+a+"','"+userID+"','"+b+"','"+c+"','"+d+"','"+e1+"','"+f+"') ON DUPLICATE KEY UPDATE CVComp = '"+b+"', CoverLComp = '"+c+"',NoOfPlacements = '"+d+"', InterviewsPending = '"+e1+"', JobOffers = '"+f+"'");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
+
+
+
 
     public static void enableStrictMode()
     {
