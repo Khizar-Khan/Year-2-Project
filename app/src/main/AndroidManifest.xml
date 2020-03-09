@@ -12,10 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EditPlacementProgressActivity"></activity>
-        <activity android:name=".BookAppointment" />
-        <activity android:name=".IndustryPlacementsActivity" />
-        <activity android:name=".ReminderActivity" />
+        <activity android:name=".AssessmentResourceActivity"></activity>
+        <activity android:name=".ReminderActivity"></activity>
         <activity android:name=".activity_group_input" />
         <activity android:name=".DayDetail" />
         <activity android:name=".CS2005GradesActivity" />
@@ -28,16 +26,13 @@
         <activity android:name=".CS2003ModuleInfoActivity" />
         <activity android:name=".CS2002ModuleInfoActivity" />
         <activity android:name=".CS2001ModuleInfoActivity" />
-        <activity android:name=".ChatActivity" />
         <activity android:name=".ToDoListActivity" />
-        android:theme="@style/AppTheme">
         <activity android:name=".CS2005ToDoListActivity" />
         <activity android:name=".CS2004ToDoListActivity" />
         <activity android:name=".CS2003ToDoListActivity" />
         <activity android:name=".CS2002ToDoListActivity" />
         <activity android:name=".CS2001ToDoListActivity" />
         <activity android:name=".ResetPasswordActivity" />
-        <activity android:name=".ModuleSelectionBusinessComputingActivity" />
         <activity android:name=".ResourceActivity" />
         <activity android:name=".TimetableActivity" />
         <activity android:name=".ProfileActivity" />
@@ -61,39 +56,34 @@
         </activity>
         <activity android:name=".Register" />
         <activity
-            android:name=".CS2007Activity"
-            android:label="@string/action_seven"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".CS2006Activity"
-            android:label="@string/action_six"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".CS2005Activity"
             android:label="@string/action_five"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true" />
         <activity
             android:name=".CS2004Activity"
             android:label="@string/action_four"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true" />
         <activity
             android:name=".CS2003Activity"
             android:label="@string/action_three"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"/>
         <activity
             android:name=".CS2002Activity"
             android:label="@string/action_two"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"/>
         <activity
             android:name=".CS2001Activity"
             android:label="@string/action_one"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:noHistory="true"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
-
-        <receiver android:name=".AlarmReceiver" />
+        <receiver android:name=".AlarmReceiver"/>
     </application>
-
 </manifest>

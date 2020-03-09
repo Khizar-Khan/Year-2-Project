@@ -100,7 +100,341 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal" />
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/textView43"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:background="#FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.283" />
+
+                        <TextView
+                            android:id="@+id/textView42"
+                            android:layout_width="0dp"
+                            android:layout_height="55dp"
+                            android:background="#FFFFFF"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.977" />
+
+                        <TextView
+                            android:id="@+id/txtTimerDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/txtTimerHour"
+                            app:layout_constraintHorizontal_bias="0.498"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.364" />
+
+                        <TextView
+                            android:id="@+id/txtTimerDay2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/txtTimerHour"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.905" />
+
+                        <TextView
+                            android:id="@+id/txtTimerHour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.162"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.364" />
+
+                        <TextView
+                            android:id="@+id/txtTimerHour2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.158"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.905" />
+
+                        <TextView
+                            android:id="@+id/txtTimerMinute"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.081"
+                            app:layout_constraintStart_toEndOf="@+id/txtTimerHour"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.364" />
+
+                        <TextView
+                            android:id="@+id/txtTimerMinute2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.082"
+                            app:layout_constraintStart_toEndOf="@+id/txtTimerHour"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.905" />
+
+                        <TextView
+                            android:id="@+id/txtTimerSecond"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.095"
+                            app:layout_constraintStart_toEndOf="@+id/txtTimerMinute"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.364" />
+
+                        <TextView
+                            android:id="@+id/txtTimerSecond2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.095"
+                            app:layout_constraintStart_toEndOf="@+id/txtTimerMinute"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.905" />
+
+                        <TextView
+                            android:id="@+id/Assessment_name"
+                            android:layout_width="0dp"
+                            android:layout_height="38dp"
+                            android:background="#6AFFFFFF"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toTopOf="@+id/txtTimerDay"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/Assessment_name2"
+                            android:layout_width="0dp"
+                            android:layout_height="38dp"
+                            android:background="#6AFFFFFF"
+                            android:text="TextView"
+                            android:textAlignment="center"
+                            android:textSize="24sp"
+                            app:layout_constraintBottom_toTopOf="@+id/txtTimerMinute2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.801" />
+
+                        <TextView
+                            android:id="@+id/textView41"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time left:"
+                            app:layout_constraintBottom_toTopOf="@+id/txtTimerDay"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.075"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/Assessment_name"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                        <TextView
+                            android:id="@+id/textView45"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time left:"
+                            app:layout_constraintBottom_toTopOf="@+id/txtTimerDay2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.075"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/Assessment_name"
+                            app:layout_constraintVertical_bias="1.0" />
+
+                        <TextView
+                            android:id="@+id/tvEvent"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:background="#FFFFFF"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.278"
+                            tools:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tvEvent2"
+                            android:layout_width="0dp"
+                            android:layout_height="56dp"
+                            android:background="#FFFFFF"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.977"
+                            tools:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/enoughtime"
+                            android:layout_width="0dp"
+                            android:layout_height="93dp"
+                            android:alpha="0.2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <TextView
+                            android:id="@+id/enoughtime2"
+                            android:layout_width="0dp"
+                            android:layout_height="93dp"
+                            android:alpha="0.2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.968" />
+
+                        <Button
+                            android:id="@+id/PlusCount"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:onClick="PlusCounter"
+                            android:text="+"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="@+id/Assessment_name2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.38" />
+
+                        <Button
+                            android:id="@+id/PlusCount2"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:onClick="PlusCounter2"
+                            android:text="+"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="@+id/Assessment_name2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.944" />
+
+                        <Button
+                            android:id="@+id/MinusCount"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_marginEnd="52dp"
+                            android:onClick="MinusCounter"
+                            android:text="-"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.991"
+                            app:layout_constraintStart_toStartOf="@+id/textView43"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.38" />
+
+                        <Button
+                            android:id="@+id/MinusCount2"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:onClick="MinusCounter2"
+                            android:text="-"
+                            android:textSize="8sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/Assessment_name2"
+                            app:layout_constraintHorizontal_bias="0.678"
+                            app:layout_constraintStart_toStartOf="@+id/Assessment_name2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.944" />
+
+                        <TextView
+                            android:id="@+id/Counter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/PlusCount"
+                            app:layout_constraintHorizontal_bias="0.421"
+                            app:layout_constraintStart_toEndOf="@+id/MinusCount"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.364" />
+
+                        <TextView
+                            android:id="@+id/Counter2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/Assessment_name2"
+                            app:layout_constraintHorizontal_bias="0.797"
+                            app:layout_constraintStart_toStartOf="@+id/Assessment_name2"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.905" />
+
+                        <TextView
+                            android:id="@+id/Addhours"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add hours:"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/enoughtime"
+                            app:layout_constraintHorizontal_bias="0.91"
+                            app:layout_constraintStart_toStartOf="@+id/enoughtime"
+                            app:layout_constraintTop_toTopOf="@+id/Assessment_name"
+                            app:layout_constraintVertical_bias="0.252" />
+
+                        <TextView
+                            android:id="@+id/Addhours2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Add hours:"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/enoughtime"
+                            app:layout_constraintHorizontal_bias="0.91"
+                            app:layout_constraintStart_toStartOf="@+id/enoughtime"
+                            app:layout_constraintTop_toTopOf="@+id/Assessment_name"
+                            app:layout_constraintVertical_bias="0.794" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
 
@@ -277,6 +611,7 @@
                                 android:textSize="14sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/type2TXT" />
+
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
                     </androidx.cardview.widget.CardView>

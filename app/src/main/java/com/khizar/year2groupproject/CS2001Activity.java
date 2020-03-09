@@ -4,20 +4,36 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.Locale;
 
 public class CS2001Activity extends AppCompatActivity
 {
+    private TextView txtTimerDay, txtTimerHour, txtTimerMinute, txtTimerSecond, assessment, enoughtime, counter;
+    private TextView tvEvent;
+    private TextView Addhours, PlusCount, MinusCount;
+    private Handler handler;
+    private Runnable runnable;
+
+    MySQLConnector2 sqlConnector2 = new MySQLConnector2();
+    ArrayList<String> assignmentHours = sqlConnector2.AssignmentHours();
+    ArrayList<String> readHours = sqlConnector2.ReadHours();
+    public int currentCount = Integer.valueOf(readHours.get(0));
+    public int sghours = Integer.valueOf(assignmentHours.get(0));
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -62,6 +78,25 @@ public class CS2001Activity extends AppCompatActivity
         mLabel.setText(values[1]);
         dLabel.setText(values[2]);
         eLabel.setText(values[3]);
+
+        txtTimerDay = (TextView) findViewById(R.id.txtTimerDay);
+        txtTimerHour = (TextView) findViewById(R.id.txtTimerHour);
+        txtTimerMinute = (TextView) findViewById(R.id.txtTimerMinute);
+        txtTimerSecond = (TextView) findViewById(R.id.txtTimerSecond);
+        enoughtime = (TextView) findViewById(R.id.enoughtime);
+        assessment = (TextView) findViewById(R.id.Assessment_name);
+        assessment.setText(assessmentInformation.get(0));
+        tvEvent = (TextView) findViewById(R.id.tvEvent);
+        counter = (TextView) findViewById(R.id.Counter);
+        counter.setText((readHours.get(0)));
+        Addhours = (TextView) findViewById(R.id.Addhours);
+        PlusCount = (TextView) findViewById(R.id.PlusCount);
+        MinusCount = (TextView) findViewById(R.id.MinusCount);
+        /*String date = assessmentInformation.get(1);
+        scanner = new Scanner(date);
+        String newdate  = "14/03/2020";//scanner.next("\\d+/\\d+/\\d+");*/
+
+        countDownStart();
     }
 
     @Override
@@ -135,5 +170,86 @@ public class CS2001Activity extends AppCompatActivity
     {
         Intent intent = new Intent(getApplicationContext(), CS2001GradesActivity.class);
         startActivity(intent);
+    }
+    public void PlusCounter(View view)
+    {
+        //int currentCount = 0;
+
+        currentCount = currentCount + 1;
+        String newcount = String.valueOf(currentCount);
+        sqlConnector2.UpdateHours(1, currentCount);
+        counter.setText(newcount);
+    }
+    public void MinusCounter (View view){
+
+        //int currentCount = 0;
+        currentCount = currentCount - 1;
+        String newcount = String.valueOf(currentCount);
+        sqlConnector2.UpdateHours(1,currentCount);
+        counter.setText(newcount);
+    }
+
+    public void countDownStart() {
+        handler = new Handler();
+        runnable = new Runnable() {
+            @Override
+            public void run() {
+                MySQLConnector sqlConnector = new MySQLConnector();
+                ArrayList<String> assessmentInformation = sqlConnector.readAssessmentInformation();
+                int displayCount = currentCount;
+                int displayHours = sghours;
+                DateFormat dateFormat = new SimpleDateFormat(
+                        "dd/MM/yyyy");
+
+                String date = assessmentInformation.get(1);
+
+
+                handler.postDelayed(this, 1000);
+                try {
+                    Date futureDate = dateFormat.parse(date);
+                    Date currentDate = new Date();
+
+                    if (!currentDate.after(futureDate)) {
+                        long diff = futureDate.getTime()
+                                - currentDate.getTime();
+                        long days = diff / (24 * 60 * 60 * 1000);
+                        diff -= days * (24 * 60 * 60 * 1000);
+                        long hours = diff / (60 * 60 * 1000);
+                        diff -= hours * (60 * 60 * 1000);
+                        long minutes = diff / (60 * 1000);
+                        diff -= minutes * (60 * 1000);
+                        long seconds = diff / 1000;
+                        txtTimerDay.setText("" + String.format("%02d", days));
+                        txtTimerHour.setText("" + String.format("%02d", hours));
+                        txtTimerMinute.setText(""
+                                + String.format("%02d", minutes));
+                        txtTimerSecond.setText(""
+                                + String.format("%02d", seconds));
+                        if ((days * 2)< displayHours-displayCount){enoughtime.setBackgroundColor(Color.rgb(255,0,0));}
+                        if (((days * 2)>= displayHours-displayCount)&&(days < displayHours-displayCount)){enoughtime.setBackgroundColor(Color.rgb(255,255,0));}
+                        if (days >= displayHours-displayCount){enoughtime.setBackgroundColor(Color.rgb(0,255,0));}
+                    } else {
+                        tvEvent.setVisibility(View.VISIBLE);
+                        Addhours.setVisibility(View.GONE);
+                        counter.setVisibility(View.GONE);
+                        PlusCount.setVisibility(View.GONE);
+                        MinusCount.setVisibility(View.GONE);
+                        tvEvent.setText("This assessment has ended!");
+                        //textViewGone();
+                        enoughtime.setBackgroundColor(Color.rgb(255,0,0));
+                    }
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        handler.postDelayed(runnable, 1 * 1000);
+
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        handler.removeCallbacks(runnable);
     }
 }
