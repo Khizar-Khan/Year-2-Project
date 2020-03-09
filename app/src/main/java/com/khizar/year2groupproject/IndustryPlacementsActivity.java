@@ -27,6 +27,17 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_industry_placements);
 
         defineButtons();
+import android.view.View;
+import android.widget.Button;
+
+public class IndustryPlacementsActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_industry_placements);
+
+    defineButtons();
 
     }
 
@@ -45,6 +56,8 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
     private int JobOffers;
     private String CVCOMPYN;
     private String COVERLCOMPYN;
+
+    }
 
     private View.OnClickListener buttonClickListener = new View.OnClickListener() {
         @Override
@@ -151,6 +164,12 @@ public class IndustryPlacementsActivity extends AppCompatActivity {
 
 
 
+
+
+            }
+        }
+    };
+}
 
 
     /*private Button button;

@@ -30,6 +30,10 @@
         <activity android:name=".CS2001ModuleInfoActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".ToDoListActivity" />
+        android:theme="@style/AppTheme">
+        <activity android:name=".EditPlacementProgressActivity"></activity>
+        <activity android:name=".BookAppointment" />
+        <activity android:name=".IndustryPlacementsActivity" />
         <activity android:name=".CS2005ToDoListActivity" />
         <activity android:name=".CS2004ToDoListActivity" />
         <activity android:name=".CS2003ToDoListActivity" />
