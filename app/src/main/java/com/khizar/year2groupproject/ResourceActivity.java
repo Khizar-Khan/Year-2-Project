@@ -9,12 +9,15 @@ import android.os.Bundle;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -118,6 +121,9 @@ public class ResourceActivity extends AppCompatActivity {
         assessment_resourcesButton = findViewById(R.id.assessment_resourcesButton);
         mainmenuButton = findViewById(R.id.mainmenuButton);
         gobackButton = findViewById(R.id.gobackButton);
+
+        Toolbar toolbar = findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar);
 
         TextView textView_m1 = findViewById(R.id.textView_Resources_M1);
         TextView textView_m2 = findViewById(R.id.textView_Resources_M2);
@@ -589,6 +595,20 @@ public class ResourceActivity extends AppCompatActivity {
         request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
 
         downloadmanager.enqueue(request);
+    }
+
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.resource_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.request) {
+            startActivity(new Intent(ResourceActivity.this, RequestResourceActivity.class));
+        }
+        return true;
     }
 
 }

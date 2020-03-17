@@ -8,10 +8,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -78,6 +81,8 @@ public class AssessmentResourceActivity extends AppCompatActivity {
         assessment_resourceButtonM5b = findViewById(R.id.assessment_resourceButtonM5b);
         assessment_resourceButtonM5c = findViewById(R.id.assessment_resourceButtonM5c);
 
+        Toolbar toolbar = findViewById(R.id.toolbar2);
+        setSupportActionBar(toolbar);
 
         second_mainmenuButton = findViewById(R.id.second_mainmenuButton);
         second_gobackButton = findViewById(R.id.second_gobackButton);
@@ -567,5 +572,19 @@ public class AssessmentResourceActivity extends AppCompatActivity {
         request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
 
         downloadmanager.enqueue(request);
+    }
+
+    public boolean onCreateOptionsMenu (Menu menu) {
+        getMenuInflater().inflate(R.menu.resource_menu,menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.request) {
+            startActivity(new Intent(AssessmentResourceActivity.this, RequestResourceActivity.class));
+        }
+        return true;
     }
 }
