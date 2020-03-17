@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 
 public class RequestResourceActivity extends AppCompatActivity {
@@ -40,7 +41,7 @@ public class RequestResourceActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         final Spinner modulecode_spinner = findViewById(R.id.modulecode_spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Resource_Module, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.Resource_Module, R.layout.resource_spinner_colour);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         modulecode_spinner.setAdapter(adapter);
 
@@ -56,8 +57,8 @@ public class RequestResourceActivity extends AppCompatActivity {
 
             }
         });final Spinner resourcetype_spinner = findViewById(R.id.resourcetype_spinner);
-        ArrayAdapter<CharSequence> adapter_two = ArrayAdapter.createFromResource(this, R.array.Resource_Type, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        ArrayAdapter<CharSequence> adapter_two = ArrayAdapter.createFromResource(this, R.array.Resource_Type, R.layout.resource_spinner_colour);
+        adapter_two.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         resourcetype_spinner.setAdapter(adapter_two);
 
         resourcetype_spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -79,6 +80,7 @@ public class RequestResourceActivity extends AppCompatActivity {
                 Resource_Name = ResourceName_EditText.getText().toString();
                 MySQLConnector SQLConnect = new MySQLConnector();
                 SQLConnect.writeRequestResources(Module_Code, Resource_Type, Resource_Name);
+                Toast.makeText(RequestResourceActivity.this, "Resource Request Successfully Submitted", Toast.LENGTH_SHORT).show();
             }
         });
     }

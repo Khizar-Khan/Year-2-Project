@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context=".RequestResourceActivity">
 
     <LinearLayout
@@ -50,6 +51,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Select the Module Code"
+            android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"/>
 
@@ -80,6 +82,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Select the Resource Type"
+                android:textColor="#FFFFFF"
                 android:textSize="25sp"
                 android:textStyle="bold"/>
 
@@ -110,6 +113,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Enter the Resource Name"
+                android:textColor="#FFFFFF"
                 android:textSize="25sp"
                 android:textStyle="bold"/>
 
@@ -129,7 +133,10 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:hint="Resource Name" />
+                android:hint="Resource Name"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#FFFFFF" />
         </LinearLayout>
 
         <LinearLayout
@@ -144,9 +151,9 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:background="#303030"
+                android:background="@drawable/background_resource_button"
                 android:text="Submit Request"
-                android:textColor="#FFFFFF" />
+                android:textColor="@android:color/secondary_text_light" />
         </LinearLayout>
 
     </RelativeLayout>
