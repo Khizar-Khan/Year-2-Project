@@ -366,6 +366,31 @@ public class MySQLConnector
         }
     }
 
+    public void writeRequestResources(String module_Code, String resource_Type, String resource_Name)
+    {
+        enableStrictMode();
+        try
+        {
+            Statement stmt;
+
+            //Register the JDBC driver for MySQL
+            Class.forName("com.mysql.jdbc.Driver").newInstance();
+
+            String url = "jdbc:mysql://172.31.82.82:3306/ResourcesData";
+            Connection con = DriverManager.getConnection( url,"Vignesh","Vignesh");
+
+            //Get a Statement object
+            stmt = con.createStatement();
+
+            //Insert user id
+            stmt.executeUpdate("INSERT INTO RequestResources(Module_Code, Resource_Type, Resource_Name) VALUES('"+module_Code+"','"+resource_Type+"','"+resource_Name+"')");
+        }
+        catch (Exception e)
+        {
+            System.out.println(e);
+        }
+    }
+
 
 
 
