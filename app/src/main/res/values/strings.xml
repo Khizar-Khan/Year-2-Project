@@ -49,5 +49,21 @@
         <item>20</item>
     </string-array>
 
+    <string-array name="Resource_Module">
+        <item> CS2001 </item>
+        <item> CS2002 </item>
+        <item> CS2003 </item>
+        <item> CS2004 </item>
+        <item> CS2005 </item>
+    </string-array>
+
+    <string-array name="Resource_Type">
+        <item> BOOK </item>
+        <item> WEBSITE </item>
+        <item> ASSESSMENT </item>
+        <item> OTHER </item>
+    </string-array>
+
+
 
 </resources>
