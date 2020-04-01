@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiscussionForum1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Discussion Forum"
+        tools:ignore="HardcodedText,RelativeOverlap" />
+
+    <ListView
+        android:id="@+id/listvieww"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_above="@id/editText3"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="3dp"
+        android:layout_marginBottom="12dp"
+        android:divider="#F6F6F7"
+        android:dividerHeight="10dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:windowSoftInputMode="adjustPan|adjustResize" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/button2"
+        android:background="#FFF"
+        android:ems="10"
+        android:hint="Please Enter Text"
+        android:inputType="textMultiLine"
+        android:maxLength="1000"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="#000"
+        tools:ignore="Autofill,HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="101dp"
+        android:layout_alignBottom="@id/editText3"
+        android:layout_alignParentBottom="true"
+        android:layout_height="match_parent"
+        android:layout_below="@id/listvieww"
+        android:textColor="#FFFFFF"
+        android:layout_alignParentRight="true"
+        android:background="#000000"
+        android:text="SEND ➾"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+</RelativeLayout>
