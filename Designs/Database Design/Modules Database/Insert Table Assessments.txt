@@ -1,0 +1,15 @@
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2001: Assessment One', 'Final Portfolio Submission',	'Coursework', '25/03/2020', 100);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2002: Assessment One', 'Coursework',	'Coursework', '25/06/2020', 100);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2002: Assessment Two', 'Exam', 'Exam', 'Term 3', 50);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2003: Assessment One', 'Usability Engineering Report', 'Coursework',	'20/03/2020', 100);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2004: Assessment One', 'Coursework', 'Coursework', '09/03/2020', 60);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2004: Assessment Two', 'Exam', 'Exam', 'Term 3', 40);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2005: Assessment One', 'Troubleshooting distributed systems', 'Coursework', '14/02/2020', 25);
+
+INSERT INTO Assessments_Information (Assessment_Code, Assessment_Title, Assessment_Type, Assessment_Deadline, Assessment_Weight) VALUES ('CS2005: Assessment Two', 'Exam', 'Exam', 'Term 3', 75);

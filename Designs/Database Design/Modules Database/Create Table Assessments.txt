@@ -1,0 +1,7 @@
+CREATE TABLE Assessments_Information (
+	Assessment_Code VARCHAR(40) PRIMARY KEY,
+	Assessment_Title VARCHAR(50) NOT NULL,
+	Assessment_Type VARCHAR(20) NOT NULL,
+	Assessment_Deadline VARCHAR(40) NOT NULL,
+	Assessment_Weight INT NOT NULL
+)
