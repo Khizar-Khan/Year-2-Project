@@ -1,8 +1,14 @@
 package com.khizar.year2groupproject;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.work.PeriodicWorkRequest;
+import androidx.work.WorkInfo;
+import androidx.work.WorkManager;
+
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -15,17 +21,42 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.khizar.year2groupproject.workers.AssessmentDeadlineWorker;
+
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Nullable;
 
 public class MainActivity extends AppCompatActivity
 {
+    private PeriodicWorkRequest assessmentDeadlineWorkRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final WorkManager mWorkManager = WorkManager.getInstance();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            assessmentDeadlineWorkRequest = new PeriodicWorkRequest.Builder(AssessmentDeadlineWorker.class, 15, TimeUnit.MINUTES).build();
+        }
+
+        mWorkManager.getWorkInfoByIdLiveData(assessmentDeadlineWorkRequest.getId()).observe(this, new Observer<WorkInfo>() {
+            @Override
+            public void onChanged(@Nullable WorkInfo workInfo) {
+                if (workInfo != null) {
+                    WorkInfo.State state = workInfo.getState();
+                    if (state == WorkInfo.State.FAILED) {
+                        Toast toast = Toast. makeText(getApplicationContext(), "Assessment Deadline Notification: " + state.toString(), Toast.LENGTH_SHORT);
+                        toast.show();
+                    }
+                }
+            }
+        });
+
+        //trigger manually on startup
+        mWorkManager.enqueue(assessmentDeadlineWorkRequest);
     }
 
     public void logout(View view)
