@@ -4,6 +4,8 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.work.Data;
@@ -39,8 +41,12 @@ public class AssessmentDeadlineWorker extends Worker {
         Date endDate = DateUtil.AddDays(currentDate, days);
 
         ArrayList<Assessment> assessments = Assessment.GetBetween(sqlConnector, startDate, endDate);
+        Log.d("Assessment Deadline", "Between " +
+                startDate + " - " + endDate + ": " + assessments.size() + " assessment(s)");
         if (!assessments.isEmpty())
+        {
             showNotification(assessments);
+        }
 
         Data outputData = new Data.Builder().putString(WORK_RESULT, "Jobs Finished").build();
         return Result.success(outputData);
@@ -59,8 +65,11 @@ public class AssessmentDeadlineWorker extends Worker {
         for(int i = 0; i < assessments.size(); i++)
         {
             Assessment assessment = assessments.get(i);
-            contentText += assessment.getType() + " Due on " + assessment.getDeadline();
+            contentText += assessment.getType() + " - " + assessment.getTitle() + " Due on " + assessment.getDeadline() + ", ";
         }
+        // remove (, ) at the end of the text
+        contentText = contentText.substring(0, contentText.length() - 2);
+        Log.d("Assessment Deadline", contentText);
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), channelId)
                 .setContentTitle("Assessment Deadline")

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Assessment {
-    private static final int offset = 3;
+    private static final int offset = 5;
     private String Code;
     private String Title;
     private String Type;
@@ -57,23 +57,27 @@ public class Assessment {
 
     public static ArrayList<Assessment> GetBetween(MySQLConnector connector, Date startDate, Date endDate)
     {
-        ArrayList<String> data = connector.readAssessmentInformation();
+        ArrayList<String> data = connector.readAllAssessmentInformation();
         ArrayList<Assessment> assessments = new ArrayList<Assessment>();
 
         for(int i = 0; i < data.size(); i+= offset)
         {
             Assessment assessment = new Assessment();
-            String type = data.get(i);
-            String deadline = data.get(i + 1);
-            String weight = data.get(i + 2);
+            String code = data.get(i);
+            String title = data.get(i + 1);
+            String type = data.get(i + 2);
+            String deadline = data.get(i + 3);
+            String weight = data.get(i + 4);
 
             Date deadlineDate = DateUtil.GetDate(deadline, null);
             if (DateUtil.IsDateInRange(deadlineDate, startDate, endDate))
             {
+                assessment.setCode(code);
+                assessment.setTitle(title);
                 assessment.setType(type);
-                assessments.add(assessment);
                 assessment.setDeadline(deadlineDate);
                 assessment.setWeight(weight + "%");
+                assessments.add(assessment);
             }
         }
 

@@ -39,15 +39,13 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         final WorkManager mWorkManager = WorkManager.getInstance();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            assessmentDeadlineWorkRequest = new PeriodicWorkRequest.Builder(AssessmentDeadlineWorker.class, 15, TimeUnit.MINUTES)
-                    .setInputData(
-                            new Data.Builder()
-                                .putInt(AssessmentDeadlineWorker.DAYS_TAG, 100)
-                                .build()
-                            )
-                    .build();
-        }
+        assessmentDeadlineWorkRequest = new PeriodicWorkRequest.Builder(AssessmentDeadlineWorker.class, 15, TimeUnit.MINUTES)
+                .setInputData(
+                        new Data.Builder()
+                            .putInt(AssessmentDeadlineWorker.DAYS_TAG, 100)
+                            .build()
+                        )
+                .build();
 
         mWorkManager.getWorkInfoByIdLiveData(assessmentDeadlineWorkRequest.getId()).observe(this, new Observer<WorkInfo>() {
             @Override
