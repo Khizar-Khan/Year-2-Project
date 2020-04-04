@@ -12,12 +12,16 @@ import androidx.work.WorkerParameters;
 
 import com.khizar.year2groupproject.MySQLConnector;
 import com.khizar.year2groupproject.R;
+import com.khizar.year2groupproject.Utils.DateUtil;
 import com.khizar.year2groupproject.models.Assessment;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class AssessmentDeadlineWorker extends Worker {
+    public static final String DAYS_TAG = "days";
     private static final String WORK_RESULT = "work_result";
     public AssessmentDeadlineWorker(@NonNull Context context, @NonNull WorkerParameters workerParams) {
         super(context, workerParams);
@@ -26,12 +30,15 @@ public class AssessmentDeadlineWorker extends Worker {
     @NonNull
     @Override
     public Result doWork() {
-        //Data taskData = getInputData();
+        Data taskData = getInputData();
+        // use 1 week as default amount of days
+        int days = taskData.getInt(DAYS_TAG, 7);
         MySQLConnector sqlConnector = new MySQLConnector();
-        //Date currentDate = new Date();
-        Date dueDate = new Date(2020, 03, 20);
+        Date currentDate = new Date();
+        Date startDate = currentDate;
+        Date endDate = DateUtil.AddDays(currentDate, days);
 
-        ArrayList<Assessment> assessments = Assessment.GetBeforeDeadline(sqlConnector, dueDate);
+        ArrayList<Assessment> assessments = Assessment.GetBetween(sqlConnector, startDate, endDate);
         if (!assessments.isEmpty())
             showNotification(assessments);
 

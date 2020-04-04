@@ -1,6 +1,7 @@
 package com.khizar.year2groupproject.models;
 
 import com.khizar.year2groupproject.MySQLConnector;
+import com.khizar.year2groupproject.Utils.DateUtil;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -54,7 +55,7 @@ public class Assessment {
         Type = type;
     }
 
-    public static ArrayList<Assessment> GetBeforeDeadline(MySQLConnector connector, Date date)
+    public static ArrayList<Assessment> GetBetween(MySQLConnector connector, Date startDate, Date endDate)
     {
         ArrayList<String> data = connector.readAssessmentInformation();
         ArrayList<Assessment> assessments = new ArrayList<Assessment>();
@@ -66,23 +67,14 @@ public class Assessment {
             String deadline = data.get(i + 1);
             String weight = data.get(i + 2);
 
-            try
+            Date deadlineDate = DateUtil.GetDate(deadline, null);
+            if (DateUtil.IsDateInRange(deadlineDate, startDate, endDate))
             {
-                Date deadlineDate = new SimpleDateFormat("dd/MM/yyyy")
-                        .parse(deadline);
-                if (deadlineDate.compareTo(date) < 0)
-                {
-                    assessment.setType(type);
-                    assessments.add(assessment);
-                    assessment.setDeadline(deadlineDate);
-                    assessment.setWeight(weight + "%");
-                }
+                assessment.setType(type);
+                assessments.add(assessment);
+                assessment.setDeadline(deadlineDate);
+                assessment.setWeight(weight + "%");
             }
-            catch(ParseException ex)
-            {
-                //ignore assessments with invalid dates
-            }
-
         }
 
         return assessments;
