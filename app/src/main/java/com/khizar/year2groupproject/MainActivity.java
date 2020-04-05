@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity
         FirebaseApp.initializeApp(this);
         checkandGetName();
         Button dF = findViewById(R.id.discussionBTN);
-        Button rS = findViewById(R.id.resetBTN);
+//        Button rS = findViewById(R.id.resetBTN);
         dF.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,39 +48,39 @@ public class MainActivity extends AppCompatActivity
                 startActivity(newActivity);
             }
         });
-        rS.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showResetAlert();
-            }
-        });
+//        rS.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                showResetAlert();
+//            }
+//        });
     }
 
-    public void showResetAlert(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Reset Discussion forum settings?");
-        builder.setPositiveButton("RESET", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int id) {
-                try {
-                    FirebaseDatabase dReference = FirebaseDatabase.getInstance();
-                    DatabaseReference aReference = dReference.getReference("ForumMessages");
-                    DatabaseReference aReferenceUser = dReference.getReference("UserName");
-                    aReference.removeValue();
-                    aReferenceUser.removeValue();
-                    userName="#";
-                    uniqueID="UUID";
-                    dialog.dismiss();
-                }catch (Exception ignored){}
-            }
-        }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id) {
-                dialog.dismiss();
-            }
-        });
-        AlertDialog ad=builder.create();
-        ad.show();
-    }
+//    public void showResetAlert(){
+//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//        builder.setTitle("Reset Discussion forum settings?");
+//        builder.setPositiveButton("RESET", new DialogInterface.OnClickListener() {
+//            @Override
+//            public void onClick(DialogInterface dialog, int id) {
+//                try {
+//                    FirebaseDatabase dReference = FirebaseDatabase.getInstance();
+//                    DatabaseReference aReference = dReference.getReference("ForumMessages");
+//                    DatabaseReference aReferenceUser = dReference.getReference("UserName");
+//                    aReference.removeValue();
+//                    aReferenceUser.removeValue();
+//                    userName="#";
+//                    uniqueID="UUID";
+//                    dialog.dismiss();
+//                }catch (Exception ignored){}
+//            }
+//        }).setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+//            public void onClick(DialogInterface dialog, int id) {
+//                dialog.dismiss();
+//            }
+//        });
+//        AlertDialog ad=builder.create();
+//        ad.show();
+//    }
 
     @SuppressLint("HardwareIds")
     public void checkandGetName()

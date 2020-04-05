@@ -32,6 +32,7 @@ import java.util.Objects;
 import static com.khizar.year2groupproject.MainActivity.uniqueID;
 import static com.khizar.year2groupproject.MainActivity.userName;
 
+
 public class DiscussionForum1 extends AppCompatActivity {
     static ArrayList<String> arrayList;
     MyAsyncTasks myAsyncTasks;
