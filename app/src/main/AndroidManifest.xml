@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RequestResourceActivity"></activity>
+        <activity android:name=".DiscussionForum1"></activity>
+        <activity android:name=".RequestResourceActivity" />
         <activity android:name=".EditPlacementProgressActivity" />
         <activity android:name=".BookAppointment" />
         <activity android:name=".IndustryPlacementsActivity" />
